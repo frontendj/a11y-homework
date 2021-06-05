@@ -64,17 +64,14 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addFilter('filterTagList', tags => {
         // should match the list in tags.njk
-        return (tags || []).filter(tag => ['all', 'nav', 'post', 'posts'].indexOf(tag) === -1);
+        return (tags || []).filter(tag => ['all', 'nav', 'event', 'events'].indexOf(tag) === -1);
     })
 
     // https://www.11ty.dev/docs/data-deep-merge/
     eleventyConfig.setDataDeepMerge(true);
 
-    // Alias `layout: post` to `layout: layouts/post.njk`
-    eleventyConfig.addLayoutAlias('post', 'layouts/post.njk');
-
-    // Transforms
-    eleventyConfig.addTransform('htmlmin', require('./_11ty/transforms/htmlmin'));
+    // Alias `layout: event` to `layout: layouts/event.njk`
+    eleventyConfig.addLayoutAlias('event', 'layouts/event.njk');
 
     // Override Browsersync defaults (used only with --serve)
     eleventyConfig.setBrowserSyncConfig({
@@ -96,12 +93,7 @@ module.exports = function(eleventyConfig) {
 
     // Plugins
     eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-rss'));
-    eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-syntaxhighlight'), {
-        templateFormats: ['njk', 'md'],
-        trim: true,
-    });
     eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
-    eleventyConfig.addPlugin(require('eleventy-plugin-reading-time'));
     eleventyConfig.addPlugin(criticalCss, {
         // Inline the generated critical-path CSS
         // - true generates HTML

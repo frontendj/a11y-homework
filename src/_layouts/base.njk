@@ -1,17 +1,27 @@
+{% if not title %}
+    {% set generatedTitle = metadata.title %}
+{% else %}
+    {% set generatedTitle = title %}
+
+    {% if not isIndex %}
+        {% set generatedTitle = title + ' - ' + metadata.title %}
+    {% else %}
+        {% set generatedTitle = metadata.title %}
+    {% endif %}
+{% endif %}
+
 <!doctype html>
-<html lang="en">
+<html lang="ru">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{ title or metadata.title }}</title>
+        <title>{{ generatedTitle }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
 
         <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
 
         {% include 'favicon.njk' %}
         {% include 'meta-open-graph.njk' %}
-
-        <meta name="google-site-verification" content="_NotP0r5D8W-2bd04cg8fgo8qohmCpYqETdOhoY-CJI">
 
         <link rel="stylesheet" href="{{ '/styles/index.css' | url }}" media="print" onload="this.media='all'">
         <noscript>
@@ -46,6 +56,35 @@
         <main class="page__content">
             {{ content | safe }}
         </main>
+
+
+        <footer class="footer">
+            <ul class="footer__menu">
+                <li><a href="/accessible/">Посетителям с инвалидностью</a></li>
+                <li><a href="/tickets/">Билеты и льготы</a></li>
+                <li><a href="/corruption/">Противодействие коррупции</a></li>
+            </ul>
+
+            <div>
+                Социальные сети
+                <ul class="footer__menu">
+                    <li>Наша почта</li>
+                    <li>Telegram</li>
+                    <li>Facebook</li>
+                </ul>
+            </div>
+
+            <div>
+                Подписка на новости
+
+                <form>
+                    <input type="email" />
+                    <input type="checkbox"/> Согласен на обработку персональх данных
+                    <button type="submit">Подписаться</button>
+
+                </form>
+            </div>
+        </footer>
 
         <script async src="{{ '/scripts/index.js' | url }}"></script>
     </body>

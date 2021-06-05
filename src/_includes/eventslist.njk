@@ -1,0 +1,13 @@
+<ol class="posts">
+    {% for event in eventslist | reverse %}
+        <li class="posts__item {% if event.url == url %} is-active {% endif %}">
+            <a class="posts__link link link--has-visited p-1" href="{% if event.data.redirect %} {{ event.data.redirect }} {% else %} {{ event.url | url }} {% endif %}">{% if event.data.title %}{{ event.data.title }}{% else %}
+                <code>{{ event.url }}</code>{% endif %}
+            </a>
+
+            <p class="posts__info p-2">
+                <time class="posts__date" datetime="{{ event.date | htmlDateString }}">{{ event.date | readableDate }}</time>
+            </p>
+        </li>
+    {% endfor %}
+</ol>

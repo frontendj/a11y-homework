@@ -2,23 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
         
         <url>
-            <loc>http://frontendj.ru/posts/blocks-random-alignment-with-css/</loc>
-            <lastmod>2020-10-01</lastmod>
-        </url>
-        
-        <url>
-            <loc>http://frontendj.ru/posts/til/2020-12-11-form-attribute/</loc>
+            <loc>http://frontendj.ru/events/durer-matisse/</loc>
             <lastmod>2020-12-12</lastmod>
         </url>
         
         <url>
-            <loc>http://frontendj.ru/posts/rtl-text-fields/</loc>
-            <lastmod>2020-12-17</lastmod>
+            <loc>http://frontendj.ru/events/richter/</loc>
+            <lastmod>2020-12-12</lastmod>
         </url>
         
         <url>
-            <loc>http://frontendj.ru/posts/fun-front-end/</loc>
-            <lastmod>2021-03-19</lastmod>
+            <loc>http://frontendj.ru/events/tattoo/</loc>
+            <lastmod>2020-12-12</lastmod>
         </url>
         
         <url>
@@ -37,37 +32,12 @@
         </url>
         
         <url>
-            <loc>http://frontendj.ru/tags/</loc>
-            <lastmod>2021-03-26</lastmod>
+            <loc>http://frontendj.ru/to-visitors/</loc>
+            <lastmod>2021-06-05</lastmod>
         </url>
         
         <url>
-            <loc>http://frontendj.ru/tags/til/</loc>
-            <lastmod>2021-03-26</lastmod>
-        </url>
-        
-        <url>
-            <loc>http://frontendj.ru/tags/html/</loc>
-            <lastmod>2021-03-26</lastmod>
-        </url>
-        
-        <url>
-            <loc>http://frontendj.ru/tags/css/</loc>
-            <lastmod>2021-03-26</lastmod>
-        </url>
-        
-        <url>
-            <loc>http://frontendj.ru/tags/rtl/</loc>
-            <lastmod>2021-03-26</lastmod>
-        </url>
-        
-        <url>
-            <loc>http://frontendj.ru/tags/fun/</loc>
-            <lastmod>2021-03-26</lastmod>
-        </url>
-        
-        <url>
-            <loc>http://frontendj.ru/log/</loc>
-            <lastmod>2021-04-05</lastmod>
+            <loc>http://frontendj.ru/events/</loc>
+            <lastmod>2021-06-05</lastmod>
         </url>
 </urlset>

@@ -1,0 +1,5 @@
+$token-font-family-system: system-ui, -apple-system,  BlinkMacSystemFont, 'Segoe UI',  Roboto,  Ubuntu, 'Helvetica Neue',  Arial,  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+:root {
+    --font-family-system: #{$token-font-family-system};
+}

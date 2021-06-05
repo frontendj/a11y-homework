@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title or metadata.title }}</title>
+        <meta name="description" content="{{ description or metadata.description }}">
+
+        <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+
+        {% include 'favicon.njk' %}
+        {% include 'meta-open-graph.njk' %}
+
+        <meta name="google-site-verification" content="_NotP0r5D8W-2bd04cg8fgo8qohmCpYqETdOhoY-CJI">
+
+        <link rel="stylesheet" href="{{ '/styles/index.css' | url }}" media="print" onload="this.media='all'">
+        <noscript>
+            <link rel="stylesheet" href="{{ '/styles/index.css' | url }}" media="screen">
+        </noscript>
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header__home">
+                <a class="header__home-link link {% if page.url == '/' %} is-active {% endif %}" href="{{ '/' | url }}">
+                    <img class="header__photo" src="/images/menu-photo.jpg" srcset="/images/menu-photo.jpg 1x, /images/menu-photo@2x.jpg 2x" width="48" height="48" alt="">
+
+                    <div class="header__home-text p-1">
+                        {{ metadata.title }}
+                    </div>
+                </a>
+            </h1>
+
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    {%- for entry in collections.all | eleventyNavigation %}
+                        {% if entry.url !== "/" %}
+                            <li class="navigation__item p-1 {% if entry.url == page.url %} is-active {% endif %}">
+                                <a class="link" href="{{ entry.url | url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+                            </li>
+                        {% endif %}
+                    {%- endfor %}
+                </ul>
+            </nav>
+        </header>
+
+        <main class="page__content">
+            {{ content | safe }}
+        </main>
+
+        <script async src="{{ '/scripts/index.js' | url }}"></script>
+    </body>
+</html>

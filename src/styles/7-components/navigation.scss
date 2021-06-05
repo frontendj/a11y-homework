@@ -1,0 +1,21 @@
+.navigation__list {
+    display: flex;
+    align-items: center;
+}
+
+.navigation__item {
+    & + & {
+        margin-left: 16px;
+    }
+
+    a {
+        display: block;
+        padding: 4px;
+        border-radius: 4px;
+    }
+
+    &.is-active a {
+        text-decoration: none;
+        background-color: #f1eded;
+    }
+}

@@ -1,0 +1,11 @@
+:root {
+    --base-blue: 222, 69%;
+    --base-purple: 270, 60%;
+    --color-primary: hsla(var(--base-blue), 40%, 100%);
+
+    --color-link-base: var(--base-blue);
+    --color-link-visited-base: var(--base-purple);
+    --color-link: hsla(var(--color-link-base), 40%, 100%);
+    --color-link-hover: hsla(var(--color-link-base), 30%, 100%);
+    --color-link-visited: hsla(var(--color-link-visited-base), 60%, 100%);
+}

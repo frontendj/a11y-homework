@@ -1,0 +1,23 @@
+<ol class="posts">
+    {% for post in postslist | reverse %}
+        <li class="posts__item {% if post.url == url %} is-active {% endif %}">
+            <a class="posts__link link link--has-visited p-1" href="{% if post.data.redirect %} {{ post.data.redirect }} {% else %} {{ post.url | url }} {% endif %}">{% if post.data.title %}{{ post.data.title }}{% else %}
+                <code>{{ post.url }}</code>{% endif %}
+            </a>
+
+            <p class="posts__info p-2">
+                <time class="posts__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                <span aria-hidden="true"> / </span>
+                <span class="visually-hidden">with tags:</span>
+
+                {% for tag in post.data.tags | filterTagList %}
+                    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+                    <a href="{{ tagUrl | url }}" class="posts__tag link" rel="tag">
+                        <span class="visually-hidden">Tag</span>
+                        <span aria-hidden="true">#</span>{{ tag }}
+                    </a>
+                {% endfor %}
+            </p>
+        </li>
+    {% endfor %}
+</ol>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Mitya Kuznetsov</title>
+	<subtitle>I am writing about my experience with UI and (maybe) other things in my life</subtitle>
+	
+	<link href="http://frontendj.ru/feed/rss.xml" rel="self"/>
+	<link href="http://frontendj.ru"/>
+	<updated>2021-03-19T00:00:00Z</updated>
+	<id>http://frontendj.ru/</id>
+	
+	<entry>
+		<title>Fun front end</title>
+		<link href="http://frontendj.ru/posts/fun-front-end/"/>
+		<updated>2021-03-19T00:00:00Z</updated>
+		<id>http://frontendj.ru/posts/fun-front-end/</id>
+		<content type="html">&lt;p&gt;The front of the front end is powerful and these days developers can do things that couldn&#39;t be imagined a couple of years ago. Or could be? I remember times when CSS was very limited but one way or another a lot could be achieved. And I have a feeling that in reality imagination is the limitation part, not the technology. And having fun is an integral part of the process.&lt;/p&gt;
+&lt;p&gt;While browsing through different articles sometimes I meet those that I would call ‘crazy&#39;. Those where developers try something just because it&#39;s fun. Technologies behind a development preview flag, something specific to a browser, something that can be achieved easily with a different approach, something that people do just because they can.&lt;/p&gt;
+&lt;p&gt;And here I gathered some of these tricks for you. Some of the approaches are actually quite useful for specific requests, some are just fooling around. But all of them are really simple, cool and fun (and thus somehow impressive for me). I hope you&#39;ll like them.&lt;/p&gt;
+&lt;h2&gt;Animation URLs with javascript and emojis&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/&quot;&gt;https://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&quot;http://frontendj.ru/posts/fun-front-end/images/animated-url.gif&quot; alt=&quot;Example of animated URL&quot; /&gt;
+&lt;p&gt;With javascript, we can change a page URL, and the part after # can be changed actually without redirecting anywhere. So placing ASCII symbols there or emojis we can draw funny animations. Pretty cool for a home project but I also can imagine it on a more serious project&lt;/p&gt;
+&lt;h2&gt;Split emoji text effect with CSS&lt;/h2&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+            &lt;p class=&quot;codepen&quot; data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-default-tab=&quot;result&quot; data-user=&quot;mandymichael&quot; data-slug-hash=&quot;mWXGZp&quot; style=&quot;height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot; data-pen-title=&quot;Split emoji text effect with css&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/mandymichael/pen/mWXGZp&quot;&gt;
+  Split emoji text effect with css&lt;/a&gt; by Mandy Michael (&lt;a href=&quot;https://codepen.io/mandymichael&quot;&gt;@mandymichael&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;script async=&quot;&quot; src=&quot;https://cpwebassets.codepen.io/assets/embed/ei.js&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;This one is fun. Overflow: hidden, some clip-path and we can cut emojis, combine particles, create crazy combinations. Pure joy.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://frontendj.ru/posts/fun-front-end/images/combined-emojis.png&quot; alt=&quot;Example of combined emojis&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Unfortunately emoji change from platform to platform, but compared to Windows, the results aren&#39;t terrible.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://frontendj.ru/posts/fun-front-end/images/combined-emojis-windows.png&quot; alt=&quot;Example of combined emojis in MS Windows&quot; /&gt;
+&lt;/figure&gt;
+&lt;h2&gt;The talking favicon in 256 bytes&lt;/h2&gt;
+&lt;p&gt;So, as you already might hear, almost all the browsers now support SVG favicons. A brilliant developer Lea Verou showed a really easy way to create a favicon from an emoji (if you&#39;re too lazy to create a special one).&lt;/p&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+            &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Now that all modern browsers support SVG favicons, here&amp;#39;s how to turn any emoji into a favicon.svg:&lt;br /&gt;&lt;br /&gt;&amp;lt;svg xmlns=&amp;quot;&lt;a href=&quot;https://t.co/TJalgdayix&quot;&gt;https://t.co/TJalgdayix&lt;/a&gt;&amp;quot; viewBox=&amp;quot;0 0 100 100&amp;quot;&amp;gt;&lt;br /&gt;&amp;lt;text y=&amp;quot;.9em&amp;quot; font-size=&amp;quot;90&amp;quot;&amp;gt;💩&amp;lt;/text&amp;gt;&lt;br /&gt;&amp;lt;/svg&amp;gt;&lt;br /&gt;&lt;br /&gt;Useful for quick apps when you can&amp;#39;t be bothered to design a favicon! &lt;a href=&quot;https://t.co/S2F8IQXaZU&quot;&gt;pic.twitter.com/S2F8IQXaZU&lt;/a&gt;&lt;/p&gt;&amp;mdash; Lea Verou (@LeaVerou) &lt;a href=&quot;https://twitter.com/LeaVerou/status/1241619866475474946?ref_src=twsrc%5Etfw&quot;&gt;March 22, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;
+        &lt;/div&gt;
+&lt;p&gt;Second fun fact about the technique is that we don&#39;t need a separate file — we can just write&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;link&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;rel&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;icon&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;data:image/svg+xml,&amp;lt;svg xmlns=&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;http://www.w3.org/2000/svg&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt; viewBox=&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;0 0 100 100&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;&gt;&amp;lt;text y=&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;.9em&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt; font-size=&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;90&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;&gt;💩&amp;lt;/text&gt;&amp;lt;/svg&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And with a short piece of javascript the favicon gets an animated emoji 😎&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;body&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onload&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;setInterval(_=&gt;i.href=`data:image/svg+xml,&amp;lt;svg xmlns=&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;http://www.w3.org/2000/svg&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt; viewBox=&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;0 0 16 16&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;&gt;&amp;lt;text y=&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;14&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;&gt;${[...&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;😮😀😁😐😑😬&lt;span class=&quot;token punctuation&quot;&gt;&#39;&lt;/span&gt;][++x%6]}&amp;lt;/text&gt;&amp;lt;/svg&gt;`,x=9)&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+        &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;The talking favicon in 256 bytes:&lt;a href=&quot;https://t.co/DpGnPe5OTy&quot;&gt;https://t.co/DpGnPe5OTy&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;Source:&lt;br /&gt;&lt;br /&gt;&amp;lt;link rel=icon id=i&amp;gt;&lt;br /&gt;&amp;lt;body onload=&amp;quot;setInterval(_=&amp;gt;i.href=&amp;grave;data:image/svg+xml,&amp;lt;svg xmlns=%27http://www.w3.org/2000/svg&amp;#39; viewBox=&amp;#39;0 0 16 16&amp;#39;&amp;gt;&amp;lt;text y=&amp;#39;16&amp;#39;&amp;gt;&amp;dollar;{[...&amp;#39;😮😀😁😐😑😬&amp;#39;][&amp;plus;&amp;plus;x&amp;percnt;6]}&amp;lt;/text&amp;gt;&amp;lt;/svg&amp;gt;&amp;grave;,x&amp;equals;9)&amp;quot;&amp;gt; &lt;a href=&quot;https://t.co/0RlhqeluId&quot;&gt;pic.twitter.com/0RlhqeluId&lt;/a&gt;&lt;/p&gt;&amp;mdash; Martin Kleppe (@aemkei) &lt;a href=&quot;https://twitter.com/aemkei/status/1242211870448259072?ref_src=twsrc%5Etfw&quot;&gt;March 23, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://frontendj.ru/posts/fun-front-end/images/animated-favicon.gif&quot; alt=&quot;Example of animated favicon&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;Bonus&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;These cute animations reminded me of something very old. Very old, very useless but so cool. This library (http://lab.ejci.net/favico.js/) allows you to play video within a favicon (yay, one step to Doom) o_O. How crazy is that?&lt;/p&gt;
+&lt;h2&gt;JS in CSS&lt;/h2&gt;
+&lt;p&gt;We already had JS in CSS once (remember filters functions in IE?) but here we&#39;re talking about something else. The idea is simple — storing JS string in CSS native variables, we can execute them and thus understand in which file we&#39;re currently. This, for example, gives us the possibility to save something in local storage to be able to interact with CSS again using the saved information. Or something else crazy :)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://juwain.dev/posts/js-in-css-2/&quot;&gt;https://juwain.dev/posts/js-in-css-2/&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://frontendj.ru/posts/fun-front-end/images/js-in-css.gif&quot; alt=&quot;Example of setting JS variables in CSS&quot; /&gt;
+    &lt;figcaption&gt;Credits: juwain.dev&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2&gt;Using CSS without HTML&lt;/h2&gt;
+&lt;p&gt;The craziest techniques. I guess it&#39;s more about knowing the principles of browsers work, which is definitely an important skill in our profession. But also having pure, not ready for production fun🙂&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://css-tricks.com/using-css-without-html/&quot;&gt;https://css-tricks.com/using-css-without-html/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Apparently, some browsers understand a special HTTP Header Link, in which we can pass CSS code without an actual CSS file. And CSS already can contain everything, including meaningful text content in pseudo-elements.&lt;/p&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;http://frontendj.ru/posts/fun-front-end/images/header-link.jpg&quot; alt=&quot;Example of usage of HTTP Header&#39;s field Link&quot; /&gt;
+    &lt;figcaption&gt;Credits: csstricks.com&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;And here there is a nice example of what can be done in CSS without a line of HTML. Everything is easy, I just keep forgetting that a lot of stuff can be put directly into CSS notation.&lt;/p&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+            &lt;p class=&quot;codepen&quot; data-height=&quot;297&quot; data-theme-id=&quot;light&quot; data-default-tab=&quot;result&quot; data-user=&quot;ainalem&quot; data-slug-hash=&quot;oNxXRgW&quot; style=&quot;height: 297px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot; data-pen-title=&quot;CSS is Awesome&quot;&gt;
+  &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/ainalem/pen/oNxXRgW&quot;&gt;
+  CSS is Awesome&lt;/a&gt; by Mikael Ainalem (&lt;a href=&quot;https://codepen.io/ainalem&quot;&gt;@ainalem&lt;/a&gt;)
+  on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+            &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;If you know some similar examples of fun, please share. After all what else for we need Fridays ;)&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Interface localisation: adapting text fields for RTL languages</title>
+		<link href="http://frontendj.ru/posts/rtl-text-fields/"/>
+		<updated>2020-12-17T00:00:00Z</updated>
+		<id>http://frontendj.ru/posts/rtl-text-fields/</id>
+		<content type="html">&lt;p&gt;In this article, I tell about several minor but interesting issues we discovered when adapting HTML forms on the &lt;a href=&quot;http://badoo.com/&quot;&gt;Badoo.com&lt;/a&gt; site for Hebrew and Arabic.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/bumble-tech/interface-localisation-adapting-text-fields-for-rtl-languages-67a386006a17&quot;&gt;https://medium.com/bumble-tech/interface-localisation-adapting-text-fields-for-rtl-languages-67a386006a17&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>TIL: Form attribute</title>
+		<link href="http://frontendj.ru/posts/til/2020-12-11-form-attribute/"/>
+		<updated>2020-12-12T00:00:00Z</updated>
+		<id>http://frontendj.ru/posts/til/2020-12-11-form-attribute/</id>
+		<content type="html">&lt;p&gt;You can submit forms from a button outside of the form tag by using the form attribute (&lt;a href=&quot;https://twitter.com/m1guelpf/status/1330374315058073600&quot;&gt;source and discussion)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Can be useful for example in a reset or submit form button, that is placed somewhere outside due to design demands.&lt;/p&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+    &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;🔥 You can submit forms from a button outside of the form tag by using the form attribute &lt;a href=&quot;https://t.co/72pjoWu5Ll&quot;&gt;pic.twitter.com/72pjoWu5Ll&lt;/a&gt;&lt;/p&gt;&amp;mdash; $MIGUEL Piedrafita 🥬 (@m1guelpf) &lt;a href=&quot;https://twitter.com/m1guelpf/status/1330374315058073600?ref_src=twsrc%5Etfw&quot;&gt;November 22, 2020&lt;/a&gt;&lt;/blockquote&gt; &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;Supported - &lt;a href=&quot;https://caniuse.com/form-attribute&quot;&gt;everywhere except IE11&lt;/a&gt;&lt;/p&gt;
+</content>
+	</entry>
+	
+	<entry>
+		<title>Blocks&#39; random alignment with CSS</title>
+		<link href="http://frontendj.ru/posts/blocks-random-alignment-with-css/"/>
+		<updated>2020-10-01T00:00:00Z</updated>
+		<id>http://frontendj.ru/posts/blocks-random-alignment-with-css/</id>
+		<content type="html">&lt;p&gt;Recently I had a nice CSS challenge - easy at first sight, but as usual, it happens, a bit tricky.&lt;/p&gt;
+&lt;p&gt;I needed to create a simple component in which several text blocks (let&#39;s call them tags) are displayed at random order. Something like that.&lt;/p&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+        &lt;p class=&quot;codepen&quot; data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;frontendj&quot; data-slug-hash=&quot;KKzzorz&quot; style=&quot;height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot; data-pen-title=&quot;CSS random align - 1 - static blocks&quot;&gt;
+      &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/frontendj/pen/KKzzorz&quot;&gt;
+      CSS random align - 1 - static blocks&lt;/a&gt; by Dmitry (&lt;a href=&quot;https://codepen.io/frontendj&quot;&gt;@frontendj&lt;/a&gt;)
+      on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+        &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The initial markup was simple, and the result was quite boring. Considering that actually all the blocks weren&#39;t related to each other, there was a feeling, that they needed some dynamic, and I wanted to move them randomly in different directions. And here lied the challenge. I didn&#39;t know widths of blocks (cause inner text was random), I didn&#39;t know the width of the parent (cause markup was responsive), plus some blocks took 100% of the parent&#39;s width, so I couldn&#39;t move them at all.&lt;/p&gt;
+&lt;p&gt;Ideally, I wanted to calculate somehow the random length of a shift for every text block.&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token property&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;0&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; [parentWidth] - [itemWidth]&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SCSS has a built-in function for randomizing, but we can&#39;t mix there absolute and relative dimensions, and anyway, the result would be static. So it seemed that nothing could be solved in that direction.&lt;/p&gt;
+&lt;p&gt;I could try to generate just a random number within some reasonable range and try to shift the text blocks with its help. But in this case, I would have to adjust the maximum width for the blocks, otherwise, they will go beyond the boundaries of the parent.&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@for&lt;/span&gt; $i from 1 through 4&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token selector&quot;&gt;.item:nth-child(#&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;$i&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token selector&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        $&lt;span class=&quot;token property&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;30&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; - 15&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; // getting a shift between -15px and 15px&lt;br /&gt;        &lt;span class=&quot;token property&quot;&gt;margin-left&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $random + px&lt;span class=&quot;token selector&quot;&gt;;&lt;br /&gt;        max-width: calc(100% - #&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;2 * &lt;span class=&quot;token function&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;$random&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;px&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+      &lt;p class=&quot;codepen&quot; data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;frontendj&quot; data-slug-hash=&quot;PoNNRLr&quot; style=&quot;height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot; data-pen-title=&quot;CSS random align - 2 -  SCSS random&quot;&gt;
+      &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/frontendj/pen/PoNNRLr&quot;&gt;
+      CSS random align - 2 -  SCSS random&lt;/a&gt; by Dmitry (&lt;a href=&quot;https://codepen.io/frontendj&quot;&gt;@frontendj&lt;/a&gt;)
+      on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+      &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Anyway, I tried and it seemed to work. But for long text blocks, some of the inner data were trimmed, because I had to compensate their shift with decreasing their width. In such cases, I&#39;d like to just leave blocks without shifting. Luckily some flexbox magic came to help.&lt;/p&gt;
+&lt;p&gt;If we add blocks of random width before and after each tag, they will push and pull, and therefore balance the tag randomly. Also, they will shrink to zero width if the text block is too wide.&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.item&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token property&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; flex&lt;span class=&quot;token selector&quot;&gt;;&lt;br /&gt;&lt;br /&gt;    &amp;amp;::before,&lt;br /&gt;    &amp;amp;::after&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token property&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token property&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 1 1 auto&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; red&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token property&quot;&gt;max-width&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 40%&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;    &lt;span class=&quot;token selector&quot;&gt;&amp;amp;::after&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; green&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@for&lt;/span&gt; $i from 1 through 4&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token selector&quot;&gt;.item:nth-child(#&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;$i&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token selector&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token selector&quot;&gt;&amp;amp;::before&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span class=&quot;token property&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;5&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token selector&quot;&gt;&amp;amp;::after&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;            &lt;span class=&quot;token property&quot;&gt;flex-grow&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;5&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It works! Long tags displace balancers, and short tags are randomly aligned.&lt;/p&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+      &lt;p class=&quot;codepen&quot; data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;frontendj&quot; data-slug-hash=&quot;oNxxdgQ&quot; style=&quot;height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot; data-pen-title=&quot;CSS random align - 3 - pushers and pullers&quot;&gt;
+      &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/frontendj/pen/oNxxdgQ&quot;&gt;
+      CSS random align - 3 - pushers and pullers&lt;/a&gt; by Dmitry (&lt;a href=&quot;https://codepen.io/frontendj&quot;&gt;@frontendj&lt;/a&gt;)
+      on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+      &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I could stop at this, but still I would like to add some real dynamics to make the text blocks appear with a random shift every time the block is redrawn, and not just when the CSS is recompiled. So a little bit of javascript would be fine:&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementsByClassName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;item&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;      item&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setProperty&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;--puller-grow&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;      item&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;setProperty&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&#39;--pusher-grow&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+      &lt;p class=&quot;codepen&quot; data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;frontendj&quot; data-slug-hash=&quot;JjXXvRm&quot; style=&quot;height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot; data-pen-title=&quot;CSS random align - 4 - JS random&quot;&gt;
+      &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/frontendj/pen/JjXXvRm&quot;&gt;
+      CSS random align - 4 - JS random&lt;/a&gt; by Dmitry (&lt;a href=&quot;https://codepen.io/frontendj&quot;&gt;@frontendj&lt;/a&gt;)
+      on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+      &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Now everything is fine. Blocks are randomly arranged, stay within the parent&#39;s bounds, and make the most of the available space to display their content.&lt;/p&gt;
+&lt;p&gt;I stopped here, cause the font that I used, didn&#39;t give me the possibility to add some real dynamic to the blocks, and let them slowly slide back and forth. But I was surprised, that it actually can be done with changing flex-basis property. The result isn&#39;t spectacular though.&lt;/p&gt;
+&lt;div class=&quot;snippet&quot;&gt;
+      &lt;p class=&quot;codepen&quot; data-height=&quot;265&quot; data-theme-id=&quot;light&quot; data-default-tab=&quot;css,result&quot; data-user=&quot;frontendj&quot; data-slug-hash=&quot;WNwoxgL&quot; style=&quot;height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;&quot; data-pen-title=&quot;CSS random align - 5 - flex-basis animation&quot;&gt;
+      &lt;span&gt;See the Pen &lt;a href=&quot;https://codepen.io/frontendj/pen/WNwoxgL&quot;&gt;
+      CSS random align - 5 - flex-basis animation&lt;/a&gt; by Dmitry (&lt;a href=&quot;https://codepen.io/frontendj&quot;&gt;@frontendj&lt;/a&gt;)
+      on &lt;a href=&quot;https://codepen.io/&quot;&gt;CodePen&lt;/a&gt;.&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;script async=&quot;&quot; src=&quot;https://static.codepen.io/assets/embed/ei.js&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;
+&lt;/div&gt;
+</content>
+	</entry>
+</feed>

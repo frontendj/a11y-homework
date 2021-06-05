@@ -1,0 +1,17 @@
+{% if not isIndex %}
+    {% set titleSuffix = ' • ' + metadata.title %}
+{% else %}
+    {% set titleSuffix = '' %}
+{% endif %}
+
+{% if cover %}
+    {% set ogImage = metadata.url + page.url + cover %}
+{% else %}
+    {% set ogImage = metadata.ogImage %}
+{% endif %}
+
+<meta property="og:url" content="{{ metadata.url }}{{ page.url }}"/>
+<meta property="og:title" content="{{ title }}{{ titleSuffix }}"/>
+<meta property="og:description" content="{{ description or metadata.description }}"/>
+<meta property="og:image" content="{{ ogImage }}"/>
+<meta property="og:type" content="website"/>

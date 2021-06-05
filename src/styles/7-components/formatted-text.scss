@@ -1,0 +1,50 @@
+.formatted-text {
+    @include apply-typography-p1();
+
+    * + * {
+        margin-top: var(--space-m);
+    }
+
+    h2 {
+        margin-top: var(--space-xl);
+    }
+
+    h3 {
+        margin-top: var(--space-l);
+    }
+
+    a {
+        @include simpleLink(true);
+    }
+
+    h1 {
+        @include apply-typography-header1();
+    }
+
+    h2 {
+        @include apply-typography-header2();
+    }
+
+    h3 {
+        @include apply-typography-header3();
+    }
+
+    figcaption {
+        @include apply-typography-p2();
+
+        margin-top: var(--space-xs);
+        font-style: italic;
+    }
+
+    pre {
+        @include apply-typography-p2();
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    li + li {
+        margin-top: var(--space-xs);
+    }
+}

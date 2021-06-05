@@ -1,0 +1,26 @@
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+// & to increase specificity over default a
+.link {
+    @include simpleLink();
+}
+
+a.link--has-visited {
+    &:visited {
+        color: var(--color-visited, var(--color-link-visited));
+        text-decoration-color: var(--color-border-visited, hsla(var(--color-link-visited-base), 40%, 50%));
+    }
+
+    &:hover {
+        color: var(--color-hover, var(--color-link-hover));
+        text-decoration-color: var(--color-border-hover, currentColor);
+    }
+}

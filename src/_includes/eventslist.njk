@@ -1,13 +1,27 @@
-<ol class="posts">
-    {% for event in eventslist | reverse %}
-        <li class="posts__item {% if event.url == url %} is-active {% endif %}">
-            <a class="posts__link link link--has-visited p-1" href="{% if event.data.redirect %} {{ event.data.redirect }} {% else %} {{ event.url | url }} {% endif %}">{% if event.data.title %}{{ event.data.title }}{% else %}
-                <code>{{ event.url }}</code>{% endif %}
-            </a>
+<div class="events">
+    <div class="events__filter">
 
-            <p class="posts__info p-2">
-                <time class="posts__date" datetime="{{ event.date | htmlDateString }}">{{ event.date | readableDate }}</time>
-            </p>
-        </li>
-    {% endfor %}
-</ol>
+    </div>
+
+    <ul class="events__list">
+        {% for event in eventslist | reverse %}
+            <li class="events__item">
+                <div class="event-card">
+                    <div class="event-card__content">
+                        <img class="event-card__image" src="{{ event.url | url }}cover-small.jpg" alt=""/>
+                        <a class="event-card__link link link--has-visited p-1" href="{{ event.url | url }}">{{ event.data.title }}</a>
+                        <div>{{ event.data.dates }}</div>
+                        <div>{{ event.data.description }}</div>
+                    </div>
+
+                    <div class="event-card__action">
+                        <button>
+                            Купить билет
+                            <span class="visually-hidden">, {% if event.data.titleShort %} {{ event.data.titleShort }} {% else %} {{ event.data.title }} {% endif %}</span>
+                        </button>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

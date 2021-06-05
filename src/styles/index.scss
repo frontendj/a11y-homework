@@ -22,11 +22,12 @@
 // components
 @import '7-components/formatted-text';
 @import '7-components/header';
+@import '7-components/footer';
 @import '7-components/navigation';
-@import '7-components/posts';
-@import '7-components/post';
 @import '7-components/content-nav';
-@import '7-components/prism-default';
+@import '7-components/events';
+@import '7-components/event-card';
+@import '7-components/search-field';
 
 // utilities
 @import '8-utilities/helpers';

@@ -1,32 +1,37 @@
 .header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 8px var(--page-gap-horizontal);
+    padding: var(--page-gap-vertical) var(--page-gap-horizontal) 0;
     flex: 0 0 auto;
     max-width: calc(var(--page-max-width) + 2 * var(--page-gap-horizontal));
     width: 100%;
     margin: 0 auto;
 }
 
-.header__photo {
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    overflow: hidden;
-    margin-right: 8px;
+.header__logo {
+    width: 200px;
+    height: 42px;
     flex: 0 0 auto;
 }
 
 .header__home {
-    font-size: 1rem;
     margin-right: 16px;
 }
 
-.header__home-link {
-    display: flex;
-    align-items: center;
+.header__navigation {
+    width: 100%;
+    margin-top: var(--space-2xl);
+}
 
-    &.is-active {
-        text-decoration: none;
+.header__search {
+    min-width: 295px;
+    max-width: 295px;
+    flex: 1 0 auto;
+    margin-left: auto;
+    transition: max-width 0.2s;
+
+    &:focus-within {
+        max-width: 400px;
     }
 }

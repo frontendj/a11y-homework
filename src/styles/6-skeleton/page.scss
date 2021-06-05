@@ -12,3 +12,13 @@
     flex-direction: column;
     width: 100%;
 }
+
+.page__section {
+    & + & {
+        margin-top: calc(2 * var(--space-2xl));
+    }
+}
+
+.page__section-title {
+    margin-bottom: var(--space-l);
+}

@@ -31,26 +31,37 @@
     <body>
         <header class="header">
             <h1 class="header__home">
-                <a class="header__home-link link {% if page.url == '/' %} is-active {% endif %}" href="{{ '/' | url }}">
-                    <img class="header__photo" src="/images/menu-photo.jpg" srcset="/images/menu-photo.jpg 1x, /images/menu-photo@2x.jpg 2x" width="48" height="48" alt="">
-
-                    <div class="header__home-text p-1">
-                        {{ metadata.title }}
-                    </div>
+                <a class="header__home-link" href="{{ '/' | url }}">
+                    <img class="header__logo" src="/images/logo.svg" width="200" height="42" alt="">
+                    <span class="visually-hidden">{{ metadata.title }}</span>
                 </a>
             </h1>
 
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    {%- for entry in collections.all | eleventyNavigation %}
-                        {% if entry.url !== "/" %}
-                            <li class="navigation__item p-1 {% if entry.url == page.url %} is-active {% endif %}">
-                                <a class="link" href="{{ entry.url | url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
-                            </li>
-                        {% endif %}
-                    {%- endfor %}
-                </ul>
-            </nav>
+            <div class="header__search">
+                <form class="search-field" action="/search/" method="get">
+                    <label class="search-field__label" for="search">Поиск по сайту</label>
+                    <input class="search-field__input" type="search" id="search" name="search"/>
+                    <button class="search-field__action">
+                        <svg width="20" height="20" role="img" aria-label="Искать"><path d="M8.02.5C3.6.5 0 3.95 0 8.2c0 4.24 3.6 7.69 8.02 7.69a8.2 8.2 0 004.69-1.47l5.24 5.03a.9.9 0 001.23 0l.56-.54a.81.81 0 000-1.18l-5.23-5.03a7.44 7.44 0 001.52-4.5c0-4.25-3.6-7.7-8.01-7.7zM2.54 8.2c0-2.9 2.46-5.26 5.48-5.26a5.38 5.38 0 015.47 5.25c0 2.9-2.45 5.26-5.47 5.26A5.38 5.38 0 012.54 8.2z" /></svg>
+                    </button>
+                </form>
+            </div>
+
+
+
+            <div class="header__navigation">
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        {%- for entry in collections.all | eleventyNavigation %}
+                            {% if entry.url !== "/" %}
+                                <li class="navigation__item p-1 {% if entry.url == page.url %} is-active {% endif %}">
+                                    <a href="{{ entry.url | url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+                                </li>
+                            {% endif %}
+                        {%- endfor %}
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main class="page__content">
@@ -59,30 +70,32 @@
 
 
         <footer class="footer">
-            <ul class="footer__menu">
-                <li><a href="/accessible/">Посетителям с инвалидностью</a></li>
-                <li><a href="/tickets/">Билеты и льготы</a></li>
-                <li><a href="/corruption/">Противодействие коррупции</a></li>
-            </ul>
-
-            <div>
-                Социальные сети
+            <div class="footer__inner">
                 <ul class="footer__menu">
-                    <li>Наша почта</li>
-                    <li>Telegram</li>
-                    <li>Facebook</li>
+                    <li><a href="/accessible/">Посетителям с инвалидностью</a></li>
+                    <li><a href="/tickets/">Билеты и льготы</a></li>
+                    <li><a href="/corruption/">Противодействие коррупции</a></li>
                 </ul>
-            </div>
 
-            <div>
-                Подписка на новости
+                <div>
+                    Социальные сети
+                    <ul class="footer__menu">
+                        <li>Наша почта</li>
+                        <li>Telegram</li>
+                        <li>Facebook</li>
+                    </ul>
+                </div>
 
-                <form>
-                    <input type="email" />
-                    <input type="checkbox"/> Согласен на обработку персональх данных
-                    <button type="submit">Подписаться</button>
+                <div>
+                    Подписка на новости
 
-                </form>
+                    <form>
+                        <input type="email" />
+                        <input type="checkbox"/> Согласен на обработку персональх данных
+                        <button type="submit">Подписаться</button>
+
+                    </form>
+                </div>
             </div>
         </footer>
 

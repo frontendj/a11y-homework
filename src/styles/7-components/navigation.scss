@@ -1,21 +1,31 @@
 .navigation__list {
     display: flex;
     align-items: center;
+    margin-left: -8px;
 }
 
 .navigation__item {
     & + & {
-        margin-left: 16px;
+        margin-left: var(--space-l);
     }
 
     a {
+        --color-link: var(--color-text);
+        --color-border: rgba(0, 0, 0, .3);
+        --color-hover: var(--color-primary);
+
+        @include simpleLink();
+
         display: block;
-        padding: 4px;
+        padding: 4px 8px;
         border-radius: 4px;
     }
 
     &.is-active a {
+        --color-link: #fff;
+        --color-hover: #fff;
+
         text-decoration: none;
-        background-color: #f1eded;
+        background-color: #000;
     }
 }

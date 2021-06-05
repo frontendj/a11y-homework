@@ -1,0 +1,14 @@
+.events__filter {
+    margin-bottom: var(--space-xl);
+}
+
+.events__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.events__item {
+    width: calc((100% - 2 * var(--space-l)) / 3)
+}

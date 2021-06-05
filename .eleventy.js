@@ -100,7 +100,7 @@ module.exports = function(eleventyConfig) {
         // - false generates CSS
         inline: true,
         // Viewport width
-        width: 600,
+        width: 1200,
         // Viewport height
         height: 900,
         // Minify critical-path CSS when inlining

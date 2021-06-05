@@ -6,6 +6,39 @@ eleventyNavigation:
 isIndex: true
 title: Пушкинский музей
 ---
-{% set eventslist = collections.events | head(-30) %}
-{% set eventslistCounter = collections.events | length %}
-{% include "eventslist.njk" %}
+
+<div class="page__section">
+    <h2 class="page__section-title header-1">Анонсы</h2>
+    ...
+</div>
+
+
+<div class="page__section">
+    <h2 class="page__section-title header-1">
+        <a href="#">Выставки и события</a>
+    </h2>
+    {% set eventslist = collections.events | head(-30) %}
+    {% set eventslistCounter = collections.events | length %}
+    {% include "eventslist.njk" %}
+</div>
+
+<div class="page__section">
+    <h2 class="page__section-title header-1">Музей</h2>
+    ...
+</div>
+
+<div class="page__section">
+    <h2 class="page__section-title header-1">Онлайн-трансляция</h2>
+    ...
+</div>
+
+<div class="page__section">
+    <h2 class="page__section-title header-1">Экскурсии и лекции в прямом эфире</h2>
+    ...
+</div>
+
+
+
+
+
+

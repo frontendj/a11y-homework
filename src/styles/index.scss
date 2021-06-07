@@ -18,6 +18,7 @@
 
 // skeleton
 @import '6-skeleton/page';
+@import '6-skeleton/modal';
 
 // components
 @import '7-components/formatted-text';
@@ -28,6 +29,9 @@
 @import '7-components/events';
 @import '7-components/event-card';
 @import '7-components/search-field';
+@import '7-components/language-switcher';
+@import '7-components/skip-link';
+@import '7-components/dialog';
 
 // utilities
 @import '8-utilities/helpers';

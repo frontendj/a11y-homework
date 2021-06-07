@@ -35,3 +35,21 @@
         max-width: 400px;
     }
 }
+
+.header__language {
+    margin-left: var(--space-s);
+}
+
+.header__auth {
+    margin-left: var(--space-l);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    > svg {
+        pointer-events: none;
+    }
+}

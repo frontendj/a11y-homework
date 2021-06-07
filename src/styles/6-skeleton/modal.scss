@@ -1,0 +1,31 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    .has-modal & {
+        display: flex;
+    }
+
+    &::after,
+    &::before {
+        display: block;
+        width: 100%;
+        min-height: 10px;
+        content: '';
+    }
+}
+
+.modal__content {
+    position: relative;
+    margin: auto;
+    border-radius: 8px;
+    background: #fff;
+}

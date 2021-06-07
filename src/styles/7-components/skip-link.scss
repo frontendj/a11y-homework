@@ -1,0 +1,21 @@
+.skip-link {
+    @include simpleLink();
+
+    --color-link: var(--color-secondary-contrast);
+    --color-border: rgba(0, 0, 0, .3);
+    --color-hover: var(--color-secondary-contrast);
+
+    padding: 10px;
+    position: absolute;
+    left: 20px;
+    top: -100px;
+    background: #ececec;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    transition: position .2s;
+
+    &:focus {
+        top: 20px;
+    }
+}

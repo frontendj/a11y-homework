@@ -10,6 +10,19 @@ eleventyNavigation:
     <h1 class="post__title header-1">{{ title }}</h1>
 
     <div class="post__content formatted-text">
-        Страница поиска по сайту
+        По запросу <span id="request"></span> ничего не найдено
     </div>
+
+    <script>
+        function get(name){
+            if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+                return decodeURIComponent(name[1]);
+        }
+
+        const request = get('search');
+        if (request) {
+            document.title = `${request} (0 результатов) - ${document.title}`;
+            document.getElementById('request').innerText = request;
+        }
+    </script>
 </article>

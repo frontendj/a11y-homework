@@ -52,6 +52,84 @@ function closeAuthDialog(){
     document.getElementById('auth-button').focus();
 }
 
+function setMuseumInfoRoverFocus() {
+    // Define values for keycodes
+    var LEFT = 37;
+    var UP = 38;
+    var RIGHT = 39;
+    var DOWN = 40;
+
+    // Helper function to convert NodeLists to Arrays
+    function slice(nodes) {
+        return Array.prototype.slice.call(nodes);
+    }
+
+    function TabGroup(id) {
+        this.el = document.querySelector(id);
+        this.buttons = slice(this.el.querySelectorAll('button'));
+        this.selected = 0;
+        this.focusedButton = this.buttons[this.selected];
+
+        this.el.addEventListener('keyup', this.handleKeyUp.bind(this));
+        this.el.addEventListener('click', this.handleClick.bind(this));
+    }
+
+    TabGroup.prototype.handleKeyUp = function(e) {
+        switch(e.keyCode) {
+            case LEFT: {
+                e.preventDefault();
+
+                if (this.selected === 0) {
+                    this.selected = this.buttons.length - 1;
+                } else {
+                    this.selected--;
+                }
+                break;
+            }
+
+            case RIGHT: {
+                e.preventDefault();
+
+                if (this.selected === this.buttons.length - 1) {
+                    this.selected = 0;
+                } else {
+                    this.selected++;
+                }
+                break;
+            }
+        }
+        this.changeFocus(this.selected);
+    };
+
+    TabGroup.prototype.handleClick = function(e) {
+        var children = e.target.parentNode.children
+        for (var i = 0; i < children.length; i++) {
+            if (e.target == children[i]) break;
+        }
+        this.selected = i;
+        this.changeFocus(this.selected);
+    }
+
+    TabGroup.prototype.changeFocus = function(idx) {
+        // Set the old button to tabindex -1
+        this.focusedButton.tabIndex = -1;
+        this.focusedButton.classList.remove('is-active');
+        const previousPanel = document.getElementById(this.focusedButton.getAttribute('aria-controls'));
+        previousPanel.setAttribute('hidden', true);
+
+        // Set the new button to tabindex 0 and focus it
+        this.focusedButton = this.buttons[idx];
+        this.focusedButton.tabIndex = 0;
+        this.focusedButton.focus();
+        this.focusedButton.classList.add('is-active');
+        const newPanel = document.getElementById(this.focusedButton.getAttribute('aria-controls'));
+        newPanel.removeAttribute('hidden');
+    };
+
+    var group1 = new TabGroup('#museum-info-tabs');
+}
+
 (function() {
     setPixelsPerRem();
+    setMuseumInfoRoverFocus();
 }());

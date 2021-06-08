@@ -1,0 +1,23 @@
+.museum-info {
+
+}
+
+.museum-info__tabs {
+    margin-bottom: var(--space-xl);
+    display: flex;
+}
+
+.museum-info__tab {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-m);
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    & + & {
+        margin-left: var(--space-xs);
+    }
+}

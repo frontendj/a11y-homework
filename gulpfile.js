@@ -63,7 +63,7 @@ gulp.task('cache:replace', () => {
 
     return gulp
         .src([
-            `${PUBLIC_PATH}/**/*.{html,css}`
+            `${PUBLIC_PATH}/**/*.{html,css,js}`
         ])
         .pipe(revRewrite({
             manifest

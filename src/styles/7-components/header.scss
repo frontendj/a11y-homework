@@ -1,12 +1,14 @@
 .header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     padding: var(--page-gap-vertical) var(--page-gap-horizontal) 0;
-    flex: 0 0 auto;
     max-width: calc(var(--page-max-width) + 2 * var(--page-gap-horizontal));
     width: 100%;
     margin: 0 auto;
+}
+
+.header__top {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .header__logo {
@@ -17,6 +19,7 @@
 
 .header__home {
     margin-right: 16px;
+    flex: 0 0 auto;
 }
 
 .header__navigation {
@@ -41,15 +44,35 @@
 }
 
 .header__auth {
+    display: flex;
+    align-items: center;
     margin-left: var(--space-l);
+}
+
+.header__auth-user {
+    margin-right: 16px;
+
+}
+
+.header__auth-button {
     display: flex;
     align-items: center;
     justify-content: center;
     background: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
 
     > svg {
         pointer-events: none;
     }
+}
+
+.header__auth-user {
+    max-width: 100px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
 }

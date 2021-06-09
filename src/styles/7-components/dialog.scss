@@ -1,5 +1,85 @@
+
 .dialog {
-    padding: var(--space-2xl) calc(2 * var(--space-2xl));
+    --dialog-gap-horizontal: calc(2 * var(--space-2xl));
+    --dialog-margin-horizontal: var(--space-m);
+
+    padding: var(--space-2xl) var(--dialog-gap-horizontal);
     width: 100%;
     max-width: 800px;
+}
+
+.dialog__content {
+    max-width: 480px;
+    width: calc(100vw - 2 * var(--dialog-gap-horizontal) - 2 * var(--dialog-margin-horizontal));
+}
+
+.dialog__title {
+    margin-bottom: var(--space-m);
+}
+
+.dialog__subtitle {
+    margin-bottom: var(--space-m);
+}
+
+.dialog__control + .dialog__control {
+    margin-top: var(--space-m);
+}
+
+.dialog__actions {
+    margin-top: var(--space-xl);
+}
+
+.dialog__input {
+    width: 100%;
+    background: #F9F9FB;
+    border: 1px solid #C7D2E9;
+    min-height: 60px;
+    border-radius: 8px;
+    appearance: none;
+    padding: 0 16px;
+    font-size: var(--step-5);
+}
+
+.dialog__label {
+    margin-bottom: var(--space-2xs);
+}
+
+.dialog__actions {
+    > * + * {
+        margin-top: var(--space-m);
+    }
+}
+
+.dialog__action {
+    min-height: 60px;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: var(--step-5);
+}
+
+.dialog__action--primary {
+    background: var(--color-secondary);
+}
+
+.dialog__close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 0;
+    appearance: none;
+    cursor: pointer;
 }

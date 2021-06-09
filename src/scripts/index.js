@@ -13,13 +13,15 @@ function openAuthDialog(){
 
     const  focusableElements =
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    const modal = document.querySelector('#modal');
+    const modal = document.querySelector('#modal-login');
+    modal.removeAttribute('hidden');
 
     const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
     const focusableContent = modal.querySelectorAll(focusableElements);
     const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
 
-    document.addEventListener('keyup', function(e) {
+    // TODO: fix with keyup
+    document.addEventListener('keydown', function(e) {
         let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
         if (e.key === 'Escape' || e.keyCode === 27) {
@@ -44,12 +46,95 @@ function openAuthDialog(){
         }
     });
 
+    document.getElementById('auth-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const login = document.getElementById('login').value;
+        window.localStorage.setItem('login', login);
+
+        renderAuthBlock();
+        closeAuthDialog();
+
+        setTimeout(function() {
+            document.getElementById('auth-user').focus();
+        }, 50);
+    });
+
     firstFocusableElement.focus();
 }
 
 function closeAuthDialog(){
+    const modal = document.querySelector('#modal-login');
     document.body.classList.remove('has-modal');
-    document.getElementById('auth-button').focus();
+    modal.setAttribute('hidden', true);
+
+    setTimeout(function() {
+        document.getElementById('login-button').focus();
+    }, 50);
+}
+
+function openLogoutDialog(){
+    document.body.classList.add('has-modal');
+
+    const  focusableElements =
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const modal = document.querySelector('#modal-logout');
+    modal.removeAttribute('hidden');
+
+    const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+    const focusableContent = modal.querySelectorAll(focusableElements);
+    const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+    // TODO: fix with keyup
+    document.addEventListener('keydown', function(e) {
+        let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+        if (e.key === 'Escape' || e.keyCode === 27) {
+            closeAuthDialog();
+            return;
+        }
+
+        if (!isTabPressed) {
+            return;
+        }
+
+        if (e.shiftKey) { // if shift key pressed for shift + tab combination
+            if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus(); // add focus for the last focusable element
+                e.preventDefault();
+            }
+        } else { // if tab key is pressed
+            if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+                firstFocusableElement.focus(); // add focus for the first focusable element
+                e.preventDefault();
+            }
+        }
+    });
+
+    document.getElementById('logout-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        window.localStorage.removeItem('login')
+
+        renderAuthBlock();
+        closeLoginDialog();
+
+        setTimeout(function() {
+            document.getElementById('login-button').focus();
+        }, 50);
+    });
+
+    firstFocusableElement.focus();
+}
+
+function closeLoginDialog(){
+    const modal = document.querySelector('#modal-logout');
+    document.body.classList.remove('has-modal');
+    modal.setAttribute('hidden', true);
+
+    setTimeout(function() {
+        document.getElementById('login-button').focus();
+    }, 50);
 }
 
 function setMuseumInfoRoverFocus() {

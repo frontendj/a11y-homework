@@ -10,29 +10,64 @@ title: Пушкинский музей
 <h1 class="visually-hidden">{{ metadata.title }}</h1>
 
 <div class="page__section">
-    <h2 class="page__section-title header-1">Анонсы</h2>
-    <div class="promo">
-        <div class="promo__navigation">
-            <div class="promo__arrow promo__arrow--prev">
+    <h2 class="page__section-title visually-hidden" id="title-promo">Анонсы</h2>
+    <div class="promo" role="group" aria-labelledby="title-promo" aria-roledescription="carousel" id="promo">
+        <span aria-live="polite" class="visually-hidden" id="current-slide-title"></span>
+        <div class="promo__navigation" id="promo-buttons">
+            <button id="promo-prev" class="promo__arrow promo__arrow--prev">
+                <span class="visually-hidden">Предыдущий слайд</span>
                 <svg width="76" height="76" focusable="false"><path d="M18.4 36L53.4.7A3 3 0 0157.7 5l-33 33 33 33a3 3 0 01-4.1 4.1l-35.1-35a3 3 0 010-4.2z" /></svg>
-            </div>
-            <div class="promo__arrow promo__arrow--next">
+            </button>
+            <button id="promo-next" class="promo__arrow promo__arrow--next">
+                <span class="visually-hidden">Следующий слайд</span>
                 <svg width="76" height="76" focusable="false"><path d="M57.6 40l-35 35.2a3 3 0 01-4.2-4.2l33-33-33-33A3 3 0 0122.5.9l35.1 35a3 3 0 010 4.2z"/></svg>
-            </div>
+            </button>
         </div>
-        <ul class="promo__list">
-            <li class="promo__item">
+        <ul class="promo__list" role="presentation" id="promo-slides">
+            <li class="promo__item is-active" role="presentation" data-title="От Дюрера до Матисса">
                 <img class="promo__image" src="/images/promo-1.jpg" alt="" />
 
-                <div class="promo__content">
+                <div class="promo__content" style="--red: 189; --green: 186; --blue: 171;">
                     <div class="promo__description">
-                        <p>От Дюрера до Матисса</p>
-                        <p>Избранные рисунки из собрания ГМИИ им. А.С. Пушкина.</p>
-                        <p>10 июля по 1 ноября</p>
-                        <p>Главное здание</p>
+                        <p class="header-3">От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина.</p>
+                        <p class="p-1">Выставка</p>
+                        <p class="p-1">10 июля - 1 ноября</p>
+                        <p class="p-1">Главное здание</p>
                     </div>
-                    <a class="promo__action" href="">
+                    <a class="promo__action" href="/events/">
                         Купить билет
+                        <span class="visually-hidden">, От Дюрера до Матисса</span>
+                    </a>
+                </div>
+            </li>
+            <li class="promo__item" role="presentation"  data-title="Московская жизнь Джамбаттисты Тьеполо" tabindex="-1" hidden>
+                <img class="promo__image" src="/images/promo-2.jpg" alt="" />
+
+                <div class="promo__content" style="--red: 57; --green: 36; --blue: 25;">
+                    <div class="promo__description">
+                        <p class="header-3">Московская жизнь Джамбаттисты Тьеполо и его сына Джандоменико</p>
+                        <p class="p-1">Выставка</p>
+                        <p class="p-1">11 февраля 2021 - 01 ноября 2022</p>
+                        <p class="p-1">Главное здание</p>
+                    </div>
+                    <a class="promo__action" href="/events/">
+                        Купить билет
+                        <span class="visually-hidden">, Московская жизнь Джамбаттисты Тьеполо и его сына Джандоменико</span>
+                    </a>
+                </div>
+            </li>
+            <li class="promo__item" role="presentation" data-title="Летняя программа «Мусейона»" tabindex="-1" hidden>
+                <img class="promo__image" src="/images/promo-3.jpg" alt="" />
+
+                <div class="promo__content" style="--red: 114; --green: 135; --blue: 117;">
+                    <div class="promo__description">
+                        <p class="header-3">Летняя программа «Мусейона»</p>
+                        <p class="p-1">Мастеркласс</p>
+                        <p class="p-1">01 июня - 07 июля 2021</p>
+                    </div>
+                    <a class="promo__action" href="/events/">
+                        Купить билет
+                        <span class="visually-hidden">, Летняя программа «Мусейона»</span>
                     </a>
                 </div>
             </li>

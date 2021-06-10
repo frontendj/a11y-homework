@@ -214,7 +214,98 @@ function setMuseumInfoRoverFocus() {
     var group1 = new TabGroup('#museum-info-tabs');
 }
 
+
+function setPromoRoverFocus() {
+    // Define values for keycodes
+    var LEFT = 37;
+    var RIGHT = 39;
+
+    // Helper function to convert NodeLists to Arrays
+    function slice(nodes) {
+        return Array.prototype.slice.call(nodes);
+    }
+
+    function TabGroup(id) {
+        this.el = document.querySelector(id);
+        this.slides = slice(this.el.querySelectorAll('li'));
+        this.selected = 0;
+        this.focusedSlide = this.slides[this.selected];
+
+        this.el.addEventListener('keyup', this.handleKeyUp.bind(this));
+
+        this.prevButton = this.el.querySelectorAll('#promo-prev');
+        this.nextButton = this.el.querySelectorAll('#promo-next');
+
+
+        this.prevButton[0].addEventListener('click', this.scrollBackwards.bind(this));
+        this.nextButton[0].addEventListener('click', this.scrollForward.bind(this));
+    }
+
+    TabGroup.prototype.scrollForward = function(e) {
+        console.log('forward');
+        e.preventDefault();
+
+        if (this.selected === this.slides.length - 1) {
+            this.selected = 0;
+        } else {
+            this.selected++;
+        }
+
+        this.changeFocus(this.selected);
+    }
+
+    TabGroup.prototype.scrollBackwards = function(e) {
+        console.log('back');
+        e.preventDefault();
+
+        if (this.selected === 0) {
+            this.selected = this.slides.length - 1;
+        } else {
+            this.selected--;
+        }
+
+        this.changeFocus(this.selected);
+    }
+
+    TabGroup.prototype.handleKeyUp = function(e) {
+        switch(e.keyCode) {
+            case LEFT: {
+                this.scrollBackwards(e);
+                break;
+            }
+
+            case RIGHT: {
+                this.scrollForward(e);
+                break;
+            }
+        }
+    };
+
+    TabGroup.prototype.changeFocus = function(idx) {
+        // Set the old button to tabindex -1
+        this.focusedSlide.tabIndex = -1;
+        this.focusedSlide.classList.remove('is-active');
+        this.focusedSlide.setAttribute('hidden', true);
+
+
+
+        // Set the new button to tabindex 0 and focus it
+        this.focusedSlide = this.slides[idx];
+        this.focusedSlide.tabIndex = 0;
+        this.focusedSlide.classList.add('is-active');
+        this.focusedSlide.removeAttribute('hidden');
+
+        const slideTitle = this.focusedSlide.getAttribute('data-title');
+        const slidesCount = this.slides.length;
+        const slideAnnounce = `${slideTitle}, Слайд ${idx+1} из ${slidesCount}`;
+        document.getElementById('current-slide-title').innerText = slideAnnounce;
+    };
+
+    var group2 = new TabGroup('#promo');
+}
+
 (function() {
     setPixelsPerRem();
     setMuseumInfoRoverFocus();
+    setPromoRoverFocus();
 }());

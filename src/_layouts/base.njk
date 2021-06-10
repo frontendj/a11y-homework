@@ -42,7 +42,8 @@
                         <label class="search-field__label" for="search">Поиск по сайту</label>
                         <input class="search-field__input" type="search" id="search" name="search"/>
                         <button class="search-field__action">
-                            <svg width="20" height="20" role="img" aria-label="Искать" focusable="false"><path d="M8.02.5C3.6.5 0 3.95 0 8.2c0 4.24 3.6 7.69 8.02 7.69a8.2 8.2 0 004.69-1.47l5.24 5.03a.9.9 0 001.23 0l.56-.54a.81.81 0 000-1.18l-5.23-5.03a7.44 7.44 0 001.52-4.5c0-4.25-3.6-7.7-8.01-7.7zM2.54 8.2c0-2.9 2.46-5.26 5.48-5.26a5.38 5.38 0 015.47 5.25c0 2.9-2.45 5.26-5.47 5.26A5.38 5.38 0 012.54 8.2z" /></svg>
+                            <span class="visually-hidden">Искать</span>
+                            <svg width="20" height="20" focusable="false"><path d="M8.02.5C3.6.5 0 3.95 0 8.2c0 4.24 3.6 7.69 8.02 7.69a8.2 8.2 0 004.69-1.47l5.24 5.03a.9.9 0 001.23 0l.56-.54a.81.81 0 000-1.18l-5.23-5.03a7.44 7.44 0 001.52-4.5c0-4.25-3.6-7.7-8.01-7.7zM2.54 8.2c0-2.9 2.46-5.26 5.48-5.26a5.38 5.38 0 015.47 5.25c0 2.9-2.45 5.26-5.47 5.26A5.38 5.38 0 012.54 8.2z" /></svg>
                         </button>
                     </form>
                 </div>
@@ -59,13 +60,15 @@
 
                 <div class="header__auth">
 
-                    <button class="header__auth-button" onClick="openAuthDialog()" aria-haspopup="dialog" id="login-button" aria-label="Войти">
+                    <button class="header__auth-button" onClick="openAuthDialog()" aria-haspopup="dialog" id="login-button">
+                        <span class="visually-hidden">Войти</span>
                         <svg width="46" height="46" focusable="false"><path d="M22.7 22.2c3 0 5.7-1.1 7.8-3.3a10.7 10.7 0 003.3-7.8c0-3-1.1-5.7-3.3-7.8A10.7 10.7 0 0022.7 0c-3 0-5.7 1.1-7.9 3.3a10.7 10.7 0 00-3.2 7.8c0 3 1 5.7 3.2 7.8a10.7 10.7 0 007.9 3.3zm-6-17a8 8 0 016-2.5 8 8 0 015.9 2.5 8 8 0 012.5 5.9 8 8 0 01-2.5 6 8 8 0 01-6 2.4 8 8 0 01-5.8-2.5 8 8 0 01-2.5-6 8 8 0 012.4-5.9zm25.4 30.2a27.4 27.4 0 00-1.1-5.9l-1.2-2.7c-.6-.9-1.2-1.7-1.8-2.3a8 8 0 00-2.6-1.7 9 9 0 00-3.4-.6c-.4 0-.9.2-1.8.8l-1.8 1.2c-.6.4-1.5.7-2.5 1a9.6 9.6 0 01-6 0c-1-.3-1.7-.6-2.3-1l-2-1.2c-.8-.6-1.2-.8-1.7-.8a9 9 0 00-3.3.6c-1 .4-2 1-2.6 1.7-.7.6-1.3 1.4-1.9 2.3-.5 1-.9 1.8-1.2 2.8a27.2 27.2 0 00-1 5.8L3.8 38c0 2.4.7 4.3 2.2 5.8A8.2 8.2 0 0012 46H34c2.4 0 4.4-.7 5.9-2.1a7.7 7.7 0 002.3-5.8l-.1-2.7zm-4 6.5a5.5 5.5 0 01-4 1.4H11.8c-1.7 0-3-.5-4-1.4-1-.9-1.4-2.2-1.4-3.8a24.5 24.5 0 011-7.7l1-2.3 1.3-1.7a5.3 5.3 0 011.8-1 6.2 6.2 0 012-.5l.6.3 2 1.3c.7.5 1.7 1 3 1.3a12.3 12.3 0 007.6 0 14 14 0 003-1.3 241.6 241.6 0 002.4-1.6 6.2 6.2 0 012.2.4 5.3 5.3 0 011.7 1.1 12.3 12.3 0 012.3 4 24.7 24.7 0 011 5.2V38c0 1.7-.4 2.9-1.4 3.8z"/></svg>
                     </button>
 
                     <a class="header__auth-user p-3" href="/profile/" id="auth-user" hidden><span id="auth-login"></span><span class="visually-hidden">, профиль</span></a>
 
-                    <button class="header__auth-button" onClick="openLogoutDialog()" aria-haspopup="dialog" id="logout-button" aria-label="Выйти" hidden>
+                    <button class="header__auth-button" onClick="openLogoutDialog()" aria-haspopup="dialog" id="logout-button" hidden>
+                        <span class="visually-hidden">Выйти</span>
                         <svg width="46" height="46" focusable="false"><path d="M11.3 9.3h13V4h-16c-1.2.4-2 1.3-2.3 2.5v31.8c.3 1.2 1.1 2.2 2.3 2.5h16v-5.3h-13V9.3zM32.6 12c-.4.2-.5.6-.5 1.2v6.6l-4-.1h-3.7c-1.6 0-2.5 0-2.7.2-1 .5-1.4 1.4-1.4 2.5 0 1.2.4 2 1.2 2.5.3.1 1.1.2 2.7.2H28l4.2-.2v6.6c0 .6.1 1 .5 1.2l.6.2c.3 0 .5 0 .7-.2l3.4-3.2c4.3-4 6.5-6.2 6.5-6.3.2-.2.3-.4.3-.8 0-.3 0-.6-.3-.9a311 311 0 00-7.6-7.3L34 12.1l-.7-.2-.6.1z" /></svg>
                     </button>
                 </div>
@@ -121,7 +124,8 @@
         <div class="modal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal-login-title" id="modal-login" hidden>
             <div class="modal__content">
                 <div class="dialog">
-                    <button class="dialog__close" onClick="closeAuthDialog()" aria-label="Закрыть">
+                    <button class="dialog__close" onClick="closeAuthDialog()">
+                        <span class="visually-hidden">Закрыть</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M13.414 12l7.293-7.293a1 1 0 00-1.414-1.414L12 10.586 4.707 3.293a1 1 0 00-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 101.414 1.414L12 13.414l7.293 7.293a1 1 0 101.414-1.414L13.414 12z" fill="currentColor"></path></svg>
                     </button>
                     <div class="dialog__content">
@@ -151,7 +155,8 @@
         <div class="modal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal-logout-title" id="modal-logout" hidden>
             <div class="modal__content">
                 <div class="dialog">
-                    <button class="dialog__close" onClick="closeAuthDialog()" aria-label="Закрыть">
+                    <button class="dialog__close" onClick="closeAuthDialog()">
+                        <span class="visually-hidden">Закрыть</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M13.414 12l7.293-7.293a1 1 0 00-1.414-1.414L12 10.586 4.707 3.293a1 1 0 00-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 101.414 1.414L12 13.414l7.293 7.293a1 1 0 101.414-1.414L13.414 12z" fill="currentColor"></path></svg>
                     </button>
                     <div class="dialog__content">

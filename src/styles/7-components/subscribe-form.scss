@@ -1,0 +1,97 @@
+.subscribe-form {
+    width: 100%;
+    max-width: 480px;
+    min-width: 200px;
+    margin-top: -20px;
+
+    @media (min-width: 720px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.subscribe-form__control {
+    margin-top: 20px;
+}
+
+.subscribe-form__control--email {
+
+    flex: 1 0 auto;
+    position: relative;
+    margin-right: var(--space-s);
+
+    @media (min-width: 720px) {
+        order: 1;
+    }
+}
+
+.subscribe-form__control--agreement {
+    margin-top: var(--space-s);
+    width: 100%;
+    display: flex;
+
+    @media (min-width: 720px) {
+        order: 3;
+    }
+}
+
+.subscribe-form__email-field {
+    min-height: 44px;
+    background: 0;
+    border: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+
+.subscribe-form__email-label {
+    margin-bottom: var(--space-2xs);
+
+    @media (min-width: 720px) {
+        position: absolute;
+        bottom: 100%;
+        margin: 0;
+    }
+}
+
+.subscribe-form__action {
+    margin-top: 20px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-m);
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    color: var(--color-primary-contrast);
+    flex: 0 0 auto;
+
+    @media (min-width: 720px) {
+        order: 2;
+    }
+
+    &:hover {
+        color: var(--color-primary-contrast);
+    }
+}
+
+.subscribe-form__checkbox {
+    display: inline-block;
+    margin-right: var(--space-2xs);
+    width: var(--space-m);
+    height: var(--space-m);
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+    }
+}
+
+.subscribe-form__agreement {
+    flex: 1 1 auto;
+}

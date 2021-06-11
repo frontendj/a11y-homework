@@ -4,7 +4,7 @@
 }
 
 .page__content {
-    padding: 0 var(--page-gap-horizontal) var(--page-gap-vertical);
+    padding: 0 var(--page-gap-horizontal) calc(2 * var(--space-2xl));
     max-width: calc(var(--page-max-width) + 2 * var(--page-gap-horizontal));
     margin: var(--space-s) auto 0;
     flex: 1 0 auto;

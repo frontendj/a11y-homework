@@ -18,6 +18,12 @@
     appearance: none;
     width: 76px;
     height: 76px;
+    cursor: pointer;
+    color: var(--color-text);
+
+    &:hover {
+        color: var(--color-primary);
+    }
 }
 
 .promo__arrow--prev {
@@ -40,9 +46,9 @@
 
     // https://codepen.io/Hancock123/pen/vYLxowG
     --threshold: 0.5;
-    --r: calc(var(--red) * 0.2126);
-    --g: calc(var(--green) * 0.7152);
-    --b: calc(var(--blue) * 0.0722);
+    --r: calc(var(--red) * 0.299);
+    --g: calc(var(--green) * 0.587);
+    --b: calc(var(--blue) * 0.114);
     --sum: calc(var(--r) + var(--g) + var(--b));
     --perceived-lightness: calc(var(--sum) / 255);
 
@@ -75,19 +81,38 @@
     pointer-events: none;
 }
 
+.promo__contrast {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background: #fff;
+    z-index: 1;
+    content: '';
+    opacity: 0.4;
+    padding-right: var(--space-m);
+
+    .promo__action {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
 .promo__action {
     margin-top: auto;
-    position: relative;
     z-index: 1;
+    position: relative;
     min-height: 58px;
-    display: flex;
+    display: inline-flex;
+    vertical-align: top;
     align-items: center;
     padding: 0 var(--space-m);
     cursor: pointer;
-    background-color: var(--color-primary);
     border: none;
     border-radius: 8px;
+    background-color: var(--color-primary);
     color: var(--color-primary-contrast);
+    box-shadow: 0 0 2px 2px #fff;
 
     &:hover {
         color: var(--color-primary-contrast);

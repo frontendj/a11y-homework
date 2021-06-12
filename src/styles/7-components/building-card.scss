@@ -11,3 +11,12 @@
 .building-card__address {
     margin-bottom: var(--space-s);
 }
+
+.building-card__more {
+    --color-link: var(--color-text);
+    --color-border: rgba(0, 0, 0, .3);
+    --color-hover: var(--color-primary);
+    --color-border-hover: rgba(0, 0, 0, 0);
+
+    @include simpleLink();
+}

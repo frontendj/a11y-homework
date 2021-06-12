@@ -60,18 +60,14 @@
 }
 
 .footer__left {
-    flex: 1 1 50%;
+    flex: 1 1 auto;
     min-width: 300px;
     margin-top: var(--space-2xl);
 }
 
 .footer__right {
-    flex: 1 1 50%;
-    min-width: 300px;
+    flex: 1 1 auto;
     margin-top: var(--space-2xl);
-}
-
-.footer__subscribe-title {
-    margin-bottom: var(--space-l);
-
+    max-width: 400px;
+    min-width: 200px;
 }

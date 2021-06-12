@@ -1,25 +1,30 @@
-<div class="events">
-    <div class="events__filter">
-
+<div class="events" role="tablist">
+    <div class="events__filter" id="events-filter">
+        <button class="events__button header-4 is-active" id="events-heading1" role="tab" tabindex="0">
+            Все
+        </button>
+        <button class="events__button header-4" id="events-heading2" role="tab" tabindex="-1">
+            Сегодня
+        </button>
+        <button class="events__button header-4" id="events-heading3" role="tab" tabindex="-1">
+            Завтра
+        </button>
     </div>
 
     <ul class="events__list">
         {% for event in eventslist | reverse %}
-            <li class="events__item">
+            <li class="events__item" data-filter="{{ event.data.filter }}">
                 <div class="event-card">
                     <div class="event-card__content">
                         <img class="event-card__image" src="{{ event.url | url }}cover-small.jpg" alt=""/>
-                        <a class="event-card__link link link--has-visited p-1" href="{{ event.url | url }}">{{ event.data.title }}</a>
-                        <div>{{ event.data.dates }}</div>
-                        <div>{{ event.data.description }}</div>
+                        <a class="event-card__title header-2" href="{{ event.url | url }}">{{ event.data.title }}</a>
+                        <div class="event-card__dates p-1">{{ event.data.dates }}</div>
                     </div>
 
-                    <div class="event-card__action">
-                        <button>
-                            Купить билет
-                            <span class="visually-hidden">, {% if event.data.titleShort %} {{ event.data.titleShort }} {% else %} {{ event.data.title }} {% endif %}</span>
-                        </button>
-                    </div>
+                    <a href="/tickets/" class="event-card__action">
+                        Купить билет
+                        <span class="visually-hidden">, {% if event.data.titleShort %} {{ event.data.titleShort }} {% else %} {{ event.data.title }} {% endif %}</span>
+                    </a>
                 </div>
             </li>
         {% endfor %}

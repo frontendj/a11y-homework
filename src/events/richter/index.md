@@ -5,6 +5,7 @@ dates: "Выставка до 20 ноября"
 description: "Xxx"
 date: 2020-12-12
 layout: event.njk
+filter: today
 ---
 
 Информация о выставке

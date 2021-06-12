@@ -12,3 +12,27 @@
 .events__item {
     width: calc((100% - 2 * var(--space-l)) / 3)
 }
+
+.events__filter {
+    display: flex;
+    align-items: center;
+}
+
+.events__button {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--space-m);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent;
+
+    &.is-active {
+        background-color: var(--color-secondary);
+    }
+
+    & + & {
+        margin-left: var(--space-xs);
+    }
+}

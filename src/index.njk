@@ -16,11 +16,11 @@ title: Пушкинский музей
         <div class="promo__navigation" id="promo-buttons">
             <button id="promo-prev" class="promo__arrow promo__arrow--prev">
                 <span class="visually-hidden">Предыдущий слайд</span>
-                <svg width="76" height="76" focusable="false"><path d="M18.4 36L53.4.7A3 3 0 0157.7 5l-33 33 33 33a3 3 0 01-4.1 4.1l-35.1-35a3 3 0 010-4.2z" fill="currentColor" /></svg>
+                <svg width="76" height="76" viewBox="0 0 76 76" focusable="false"><path d="M18.4 36L53.4.7A3 3 0 0157.7 5l-33 33 33 33a3 3 0 01-4.1 4.1l-35.1-35a3 3 0 010-4.2z" fill="currentColor" /></svg>
             </button>
             <button id="promo-next" class="promo__arrow promo__arrow--next">
                 <span class="visually-hidden">Следующий слайд</span>
-                <svg width="76" height="76" focusable="false"><path d="M57.6 40l-35 35.2a3 3 0 01-4.2-4.2l33-33-33-33A3 3 0 0122.5.9l35.1 35a3 3 0 010 4.2z" fill="currentColor" /></svg>
+                <svg width="76" height="76" viewBox="0 0 76 76" focusable="false"><path d="M57.6 40l-35 35.2a3 3 0 01-4.2-4.2l33-33-33-33A3 3 0 0122.5.9l35.1 35a3 3 0 010 4.2z" fill="currentColor" /></svg>
             </button>
         </div>
         <ul class="promo__list" role="presentation" id="promo-slides">
@@ -87,7 +87,7 @@ title: Пушкинский музей
 
 <div class="page__section">
     <h2 class="page__section-title header-1">
-        <a href="#">Выставки и события</a>
+        <a href="/events/">Выставки и события</a>
     </h2>
     {% set eventslist = collections.events | head(-30) %}
     {% set eventslistCounter = collections.events | length %}

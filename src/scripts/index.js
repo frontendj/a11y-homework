@@ -8,7 +8,7 @@ function setPixelsPerRem() {
     document.documentElement.style.setProperty('--ppr', getPixelsPerRem());
 }
 
-function openAuthDialog(){
+function openLoginDialog(){
     document.body.classList.add('has-modal');
 
     const  focusableElements =
@@ -25,7 +25,12 @@ function openAuthDialog(){
         let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
         if (e.key === 'Escape' || e.keyCode === 27) {
-            closeAuthDialog();
+            closeLoginDialog();
+
+            setTimeout(function() {
+                document.getElementById('login-button').focus();
+            }, 50);
+
             return;
         }
 
@@ -53,7 +58,7 @@ function openAuthDialog(){
         window.localStorage.setItem('login', login);
 
         renderAuthBlock();
-        closeAuthDialog();
+        closeLoginDialog();
 
         setTimeout(function() {
             document.getElementById('auth-user').focus();
@@ -63,14 +68,10 @@ function openAuthDialog(){
     firstFocusableElement.focus();
 }
 
-function closeAuthDialog(){
+function closeLoginDialog(){
     const modal = document.querySelector('#modal-login');
     document.body.classList.remove('has-modal');
     modal.setAttribute('hidden', true);
-
-    setTimeout(function() {
-        document.getElementById('login-button').focus();
-    }, 50);
 }
 
 function openLogoutDialog(){
@@ -90,7 +91,11 @@ function openLogoutDialog(){
         let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
         if (e.key === 'Escape' || e.keyCode === 27) {
-            closeAuthDialog();
+            closeLogoutDialog();
+
+            setTimeout(function() {
+                document.getElementById('logout-button').focus();
+            }, 50);
             return;
         }
 
@@ -117,7 +122,7 @@ function openLogoutDialog(){
         window.localStorage.removeItem('login')
 
         renderAuthBlock();
-        closeLoginDialog();
+        closeLogoutDialog();
 
         setTimeout(function() {
             document.getElementById('login-button').focus();
@@ -127,14 +132,64 @@ function openLogoutDialog(){
     firstFocusableElement.focus();
 }
 
-function closeLoginDialog(){
+
+function closeLogoutDialog(){
     const modal = document.querySelector('#modal-logout');
     document.body.classList.remove('has-modal');
     modal.setAttribute('hidden', true);
+}
 
-    setTimeout(function() {
-        document.getElementById('login-button').focus();
-    }, 50);
+
+function openSubscribeDialog(){
+    document.body.classList.add('has-modal');
+
+    const  focusableElements =
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const modal = document.querySelector('#modal-subscribe');
+    modal.removeAttribute('hidden');
+
+    const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+    const focusableContent = modal.querySelectorAll(focusableElements);
+    const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+    // TODO: fix with keyup
+    document.addEventListener('keydown', function(e) {
+        let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+        if (e.key === 'Escape' || e.keyCode === 27) {
+            closeSubscribeDialog();
+
+            setTimeout(function() {
+                document.getElementById('subscribe-button').focus();
+            }, 50);
+
+            return;
+        }
+
+        if (!isTabPressed) {
+            return;
+        }
+
+        if (e.shiftKey) { // if shift key pressed for shift + tab combination
+            if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus(); // add focus for the last focusable element
+                e.preventDefault();
+            }
+        } else { // if tab key is pressed
+            if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+                firstFocusableElement.focus(); // add focus for the first focusable element
+                e.preventDefault();
+            }
+        }
+    });
+
+    firstFocusableElement.focus();
+}
+
+function closeSubscribeDialog(){
+    const modal = document.querySelector('#modal-subscribe');
+    document.body.classList.remove('has-modal');
+    modal.setAttribute('hidden', true);
 }
 
 function setMuseumInfoRoverFocus() {
@@ -388,9 +443,21 @@ function setEventsRoverFocus() {
     var group3 = new TabGroup('#events-filter');
 }
 
+function onSubsribeSubmit(){
+
+    document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        document.getElementById('email-address').innerText = document.getElementById('subscribe-email').value;
+
+        openSubscribeDialog();
+    });
+}
+
 (function() {
     setPixelsPerRem();
     setMuseumInfoRoverFocus();
     setPromoRoverFocus();
     setEventsRoverFocus();
+    onSubsribeSubmit();
 }());

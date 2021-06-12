@@ -99,13 +99,28 @@
 }
 
 .promo__description {
-    a::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
+    a {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        &:focus {
+            outline: none;
+
+            &::before {
+                outline: 2px solid var(--color-primary);
+                outline-offset: 2px;
+            }
+        }
+
+        &:focus:not(:focus-visible)::before {
+            outline: 0;
+        }
     }
 }

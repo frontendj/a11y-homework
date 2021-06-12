@@ -1,73 +1,85 @@
 
     
 
+
+
+    
+
+
+
+    
+
     
         
     
 
 
 <!doctype html>
-<html lang="ru" dir="ltr">
+<html lang=ru dir="ltr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Пушкинский музей</title>
-        <meta name="description" content="Очень интересный музей в центре Москвы">
-        
-            <base href="https://frontendj.github.io/a11y-homework/">
-        
+        <meta name="description" content="">
+        <meta name="robots" content="noindex">
 
         
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖼</text></svg>">
 
 
 
-        <link rel="stylesheet" href="/styles/index-5652d465d2.css" media="all">
+        <link rel="stylesheet" href="/a11y-homework/styles/index-69b00311b4.css" media="all">
     </head>
     <body>
         <a class="skip-link" href="#main">
-            К основному контенту
+             К основному контенту 
         </a>
         <header class="header">
             <div class="header__top">
                 <div class="header__home">
-                    <a class="header__home-link" href="/" title="Пушкинский музей">
-                        <img class="header__logo" src="/images/logo.svg" width="200" height="42" alt="">
-                        <span class="visually-hidden">Пушкинский музей</span>
+                    <a class="header__home-link" href=" /a11y-homework/ " title="Пушкинский музей">
+                        <img class="header__logo" src="/a11y-homework/images/logo.svg" width="200" height="42" alt="">
+                        <span class="visually-hidden">
+                             Пушкинский музей 
+                        </span>
                     </a>
                 </div>
 
-                <div class="header__search">
-                    <form class="search-field" action="/search/" method="get">
-                        <label class="search-field__label" for="search">Поиск по сайту</label>
-                        <input class="search-field__input" type="search" id="search" name="search"/>
-                        <button class="search-field__action">
-                            <span class="visually-hidden">Искать</span>
-                            <svg width="20" height="20" focusable="false"><path d="M8.02.5C3.6.5 0 3.95 0 8.2c0 4.24 3.6 7.69 8.02 7.69a8.2 8.2 0 004.69-1.47l5.24 5.03a.9.9 0 001.23 0l.56-.54a.81.81 0 000-1.18l-5.23-5.03a7.44 7.44 0 001.52-4.5c0-4.25-3.6-7.7-8.01-7.7zM2.54 8.2c0-2.9 2.46-5.26 5.48-5.26a5.38 5.38 0 015.47 5.25c0 2.9-2.45 5.26-5.47 5.26A5.38 5.38 0 012.54 8.2z" /></svg>
-                        </button>
-                    </form>
-                </div>
+                
+                    <div class="header__search">
+                        <form class="search-field" action="/search/" method="get">
+                            <label class="search-field__label" for="search">Поиск по сайту</label>
+                            <input class="search-field__input" type="search" id="search" name="search"/>
+                            <button class="search-field__action">
+                                <span class="visually-hidden">Искать</span>
+                                <svg width="20" height="20" focusable="false"><path d="M8.02.5C3.6.5 0 3.95 0 8.2c0 4.24 3.6 7.69 8.02 7.69a8.2 8.2 0 004.69-1.47l5.24 5.03a.9.9 0 001.23 0l.56-.54a.81.81 0 000-1.18l-5.23-5.03a7.44 7.44 0 001.52-4.5c0-4.25-3.6-7.7-8.01-7.7zM2.54 8.2c0-2.9 2.46-5.26 5.48-5.26a5.38 5.38 0 015.47 5.25c0 2.9-2.45 5.26-5.47 5.26A5.38 5.38 0 012.54 8.2z" /></svg>
+                            </button>
+                        </form>
+                    </div>
+                
 
                 <div class="header__language">
                     <nav class="language-switcher" aria-label="Выбрать язык">
-                        <div class="language-switcher__item is-active" title="Русский">
-                            <span aria-hidden="true">Рус</span>
-                            <span class="visually-hidden">Русский</span>
-                        </div>
-                        <a class="language-switcher__item" href="/en" hreflang="/en">
-                            <span aria-hidden="true">Eng</span>
-                            <span class="visually-hidden" lang="en">English</span>
-                        </a>
+                        
+                            <div class="language-switcher__item is-active" title="Русский">
+                                <span aria-hidden="true">Рус</span>
+                                <span class="visually-hidden">Русский</span>
+                            </div>
+                            <a class="language-switcher__item" href="/a11y-homework/en/" hreflang="en">
+                                <span aria-hidden="true">Eng</span>
+                                <span class="visually-hidden" lang="en">English</span>
+                            </a>
+                        
                     </nav>
                 </div>
 
-                <div class="header__auth">
-                    <button class="header__auth-button" onClick="openAuthDialog()" aria-haspopup="dialog" id="login-button">
+                <div class="header__auth" >
+                    <button class="header__auth-button" onClick="openLoginDialog()" aria-haspopup="dialog" id="login-button">
                         <span class="visually-hidden">Войти</span>
                         <svg width="46" height="46" focusable="false"><path d="M22.7 22.2c3 0 5.7-1.1 7.8-3.3a10.7 10.7 0 003.3-7.8c0-3-1.1-5.7-3.3-7.8A10.7 10.7 0 0022.7 0c-3 0-5.7 1.1-7.9 3.3a10.7 10.7 0 00-3.2 7.8c0 3 1 5.7 3.2 7.8a10.7 10.7 0 007.9 3.3zm-6-17a8 8 0 016-2.5 8 8 0 015.9 2.5 8 8 0 012.5 5.9 8 8 0 01-2.5 6 8 8 0 01-6 2.4 8 8 0 01-5.8-2.5 8 8 0 01-2.5-6 8 8 0 012.4-5.9zm25.4 30.2a27.4 27.4 0 00-1.1-5.9l-1.2-2.7c-.6-.9-1.2-1.7-1.8-2.3a8 8 0 00-2.6-1.7 9 9 0 00-3.4-.6c-.4 0-.9.2-1.8.8l-1.8 1.2c-.6.4-1.5.7-2.5 1a9.6 9.6 0 01-6 0c-1-.3-1.7-.6-2.3-1l-2-1.2c-.8-.6-1.2-.8-1.7-.8a9 9 0 00-3.3.6c-1 .4-2 1-2.6 1.7-.7.6-1.3 1.4-1.9 2.3-.5 1-.9 1.8-1.2 2.8a27.2 27.2 0 00-1 5.8L3.8 38c0 2.4.7 4.3 2.2 5.8A8.2 8.2 0 0012 46H34c2.4 0 4.4-.7 5.9-2.1a7.7 7.7 0 002.3-5.8l-.1-2.7zm-4 6.5a5.5 5.5 0 01-4 1.4H11.8c-1.7 0-3-.5-4-1.4-1-.9-1.4-2.2-1.4-3.8a24.5 24.5 0 011-7.7l1-2.3 1.3-1.7a5.3 5.3 0 011.8-1 6.2 6.2 0 012-.5l.6.3 2 1.3c.7.5 1.7 1 3 1.3a12.3 12.3 0 007.6 0 14 14 0 003-1.3 241.6 241.6 0 002.4-1.6 6.2 6.2 0 012.2.4 5.3 5.3 0 011.7 1.1 12.3 12.3 0 012.3 4 24.7 24.7 0 011 5.2V38c0 1.7-.4 2.9-1.4 3.8z" fill="currentColor" /></svg>
                     </button>
 
-                    <a class="header__auth-user p-3" href="/profile/" id="auth-user" hidden><span id="auth-login"></span><span class="visually-hidden">, профиль</span></a>
+                    <a class="header__auth-user p-3" href="/a11y-homework/profile/" id="auth-user" hidden><span id="auth-login"></span><span class="visually-hidden">, профиль</span></a>
 
                     <button class="header__auth-button" onClick="openLogoutDialog()" aria-haspopup="dialog" id="logout-button" hidden>
                         <span class="visually-hidden">Выйти</span>
@@ -76,32 +88,32 @@
                 </div>
             </div>
 
-            <div class="header__navigation">
+            <div class="header__navigation" >
                 <nav class="navigation">
                         
                         
                             <div class="navigation__item p-1 ">
-                                <a href="/about/" >Музей</a>
+                                <a href="/a11y-homework/about/" >Музей</a>
                             </div>
                         
                         
                             <div class="navigation__item p-1 ">
-                                <a href="/to-visitors/" >Посетителям</a>
+                                <a href="/a11y-homework/visitors/" >Посетителям</a>
                             </div>
                         
                         
                             <div class="navigation__item p-1 ">
-                                <a href="/events/" >Выставки и события</a>
+                                <a href="/a11y-homework/events/" >Выставки и события</a>
                             </div>
                         
                         
                             <div class="navigation__item p-1 ">
-                                <a href="/shop/" >Онлайн-магазин</a>
+                                <a href="/a11y-homework/shop/" >Онлайн-магазин</a>
                             </div>
                         
                         
                             <div class="navigation__item p-1 ">
-                                <a href="/membership/" >Стать другом</a>
+                                <a href="/a11y-homework/membership/" >Стать другом</a>
                             </div>
                         
                 </nav>
@@ -128,69 +140,53 @@
         </div>
         <ul class="promo__list" role="presentation" id="promo-slides">
             <li class="promo__item is-active" role="presentation" data-title="От Дюрера до Матисса">
-                <img class="promo__image" src="/images/promo-1.jpg" alt="" />
+                <img class="promo__image" src="/a11y-homework/images/promo-1.jpg" alt="" />
 
                 <div class="promo__content" style="--red: 189; --green: 186; --blue: 171;">
                     <div class="promo__description">
-                        <p class="header-3">От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина.</p>
+                        <p class="header-3">
+                            <a href="/a11y-homework/events/">От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина.</a>
+                        </p>
                         <p class="p-1">Выставка</p>
                         <p class="p-1">10 июля - 1 ноября</p>
                         <p class="p-1">Главное здание</p>
                     </div>
-                    <div class="promo__contrast">
-                        <div class="promo__action" aria-hidden="true">Купить билет</div>
-                    </div>
-                    <a class="promo__action" href="/events/">
-                        Купить билет
-                        <span class="visually-hidden">, От Дюрера до Матисса</span>
-                    </a>
                 </div>
             </li>
             <li class="promo__item" role="presentation"  data-title="Московская жизнь Джамбаттисты Тьеполо" tabindex="-1" hidden>
-                <img class="promo__image" src="/images/promo-2.jpg" alt="" />
+                <img class="promo__image" src="/a11y-homework/images/promo-2.jpg" alt="" />
 
                 <div class="promo__content" style="--red: 57; --green: 36; --blue: 25;">
                     <div class="promo__description">
-                        <p class="header-3">Московская жизнь Джамбаттисты Тьеполо и его сына Джандоменико</p>
+                        <p class="header-3">
+                            <a href="/a11y-homework/events/">Московская жизнь Джамбаттисты Тьеполо и его сына Джандоменико</a>
+                        </p>
                         <p class="p-1">Выставка</p>
                         <p class="p-1">11 февраля 2021 - 01 ноября 2022</p>
                         <p class="p-1">Главное здание</p>
                     </div>
-                    <div class="promo__contrast">
-                        <div class="promo__action" aria-hidden="true">Купить билет</div>
-                    </div>
-                    <a class="promo__action" href="/events/">
-                        Купить билет
-                        <span class="visually-hidden">, Московская жизнь Джамбаттисты Тьеполо и его сына Джандоменико</span>
-                    </a>
                 </div>
             </li>
             <li class="promo__item" role="presentation" data-title="Летняя программа «Мусейона»" tabindex="-1" hidden>
-                <img class="promo__image" src="/images/promo-3.jpg" alt="" />
+                <img class="promo__image" src="/a11y-homework/images/promo-3.jpg" alt="" />
 
                 <div class="promo__content" style="--red: 114; --green: 135; --blue: 117;">
                     <div class="promo__description">
-                        <p class="header-3">Летняя программа «Мусейона»</p>
+                        <p class="header-3">
+                            <a href="/a11y-homework/events/">Летняя программа «Мусейона»</a>
+                        </p>
                         <p class="p-1">Мастеркласс</p>
                         <p class="p-1">01 июня - 07 июля 2021</p>
                     </div>
-                    <div class="promo__contrast">
-                        <div class="promo__action" aria-hidden="true">Купить билет</div>
-                    </div>
-                    <a class="promo__action" href="/events/">
-                        Купить билет
-                        <span class="visually-hidden">, Летняя программа «Мусейона»</span>
-                    </a>
                 </div>
             </li>
         </ul>
     </div>
 </div>
 
-
 <div class="page__section">
     <h2 class="page__section-title header-1">
-        <a href="/events/">Выставки и события</a>
+        <a href="/a11y-homework/events/">Выставки и события</a>
     </h2>
     
     
@@ -212,12 +208,12 @@
             <li class="events__item" data-filter="tomorrow">
                 <div class="event-card">
                     <div class="event-card__content">
-                        <img class="event-card__image" src="/events/tattoo/cover-small.jpg" alt=""/>
-                        <a class="event-card__title header-2" href="/events/tattoo/">Тату</a>
+                        <img class="event-card__image" src="/a11y-homework/events/tattoo/cover-small.jpg" alt=""/>
+                        <a class="event-card__title header-2" href="/a11y-homework/events/tattoo/">Тату</a>
                         <div class="event-card__dates p-1">Выставка до 27 сентября</div>
                     </div>
 
-                    <a href="/tickets/" class="event-card__action">
+                    <a href="/a11y-homework/tickets/?title=%D0%A2%D0%B0%D1%82%D1%83" class="event-card__action">
                         Купить билет
                         <span class="visually-hidden">,  Тату </span>
                     </a>
@@ -227,12 +223,12 @@
             <li class="events__item" data-filter="today">
                 <div class="event-card">
                     <div class="event-card__content">
-                        <img class="event-card__image" src="/events/richter/cover-small.jpg" alt=""/>
-                        <a class="event-card__title header-2" href="/events/richter/">Святослав Рихтер в кругу друзей. Москва — Коктебель</a>
+                        <img class="event-card__image" src="/a11y-homework/events/richter/cover-small.jpg" alt=""/>
+                        <a class="event-card__title header-2" href="/a11y-homework/events/richter/">Святослав Рихтер в кругу друзей. Москва — Коктебель</a>
                         <div class="event-card__dates p-1">Выставка до 20 ноября</div>
                     </div>
 
-                    <a href="/tickets/" class="event-card__action">
+                    <a href="/a11y-homework/tickets/?title=%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%20%D0%A0%D0%B8%D1%85%D1%82%D0%B5%D1%80%20%D0%B2%20%D0%BA%D1%80%D1%83%D0%B3%D1%83%20%D0%B4%D1%80%D1%83%D0%B7%D0%B5%D0%B9.%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%20%E2%80%94%20%D0%9A%D0%BE%D0%BA%D1%82%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C" class="event-card__action">
                         Купить билет
                         <span class="visually-hidden">,  Святослав Рихтер в кругу друзей </span>
                     </a>
@@ -242,12 +238,12 @@
             <li class="events__item" data-filter="tomorrow">
                 <div class="event-card">
                     <div class="event-card__content">
-                        <img class="event-card__image" src="/events/durer-matisse/cover-small.jpg" alt=""/>
-                        <a class="event-card__title header-2" href="/events/durer-matisse/">От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина</a>
+                        <img class="event-card__image" src="/a11y-homework/events/durer-matisse/cover-small.jpg" alt=""/>
+                        <a class="event-card__title header-2" href="/a11y-homework/events/durer-matisse/">От Дюрера до Матисса. Избранные рисунки из собрания ГМИИ им. А.С. Пушкина</a>
                         <div class="event-card__dates p-1">Выставка до 1 ноября</div>
                     </div>
 
-                    <a href="/tickets/" class="event-card__action">
+                    <a href="/a11y-homework/tickets/?title=%D0%9E%D1%82%20%D0%94%D1%8E%D1%80%D0%B5%D1%80%D0%B0%20%D0%B4%D0%BE%20%D0%9C%D0%B0%D1%82%D0%B8%D1%81%D1%81%D0%B0.%20%D0%98%D0%B7%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%80%D0%B8%D1%81%D1%83%D0%BD%D0%BA%D0%B8%20%D0%B8%D0%B7%20%D1%81%D0%BE%D0%B1%D1%80%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%93%D0%9C%D0%98%D0%98%20%D0%B8%D0%BC.%20%D0%90.%D0%A1.%20%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%B0" class="event-card__action">
                         Купить билет
                         <span class="visually-hidden">,  От Дюрера до Матисса </span>
                     </a>
@@ -274,67 +270,61 @@
             <ul class="buildings-list">
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-1.png" alt=""/>
-                        <h3 class="building-card__title">МЕМОРИАЛЬНАЯ КВАРТИРА С.Т. РИХТЕРА</h3>
-                        <p class="building-card__address street-address">ул. Большая Бронная, 2/6, 16 этаж, кв. 58</p>
-                        <a class="building-card__more" href="/building-1/">Подробнее
-                            <span class="visually-hidden">, Квартира Рихтера</span>
-                        </a>
+                        <img class="building-card__image" src="/a11y-homework/images/building-1.png" alt=""/>
+                        <div class="building-card__title header-2">
+                            <a href="/a11y-homework/buildings/#3">Мемориальная квартира С.Т. Рихтера</a>
+                        </div>
+                        <p class="building-card__address street-address p-1">ул. Большая Бронная, 2/6, 16 этаж, кв. 58</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-2.png" alt=""/>
-                        <h3 class="building-card__title">ЦЭВ «МУСЕЙОН»</h3>
-                        <p class="building-card__address"><span class="street-address">Колымажный пер., 6/2, 3</span> (вход с Малого Знаменского переулка)</p>
-                        <a class="building-card__more" href="/building-2/">Подробнее
-                            <span class="visually-hidden">, Мусейон</span>
-                        </a>
+                        <img class="building-card__image" src="/a11y-homework/images/building-2.png" alt=""/>
+                        <div class="building-card__title header-2">
+                            <a href="/a11y-homework/buildings/#3">Центр эстетического воспитания «Мусейон»</a>
+                        </div>
+                        <p class="building-card__address p-1"><span class="street-address">Колымажный пер., 6/2, 3</span> (вход с Малого Знаменского переулка)</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-3.png" alt=""/>
-                        <h3 class="building-card__title">УСАДЬБА ЛОПУХИНЫХ</h3>
-                        <p class="building-card__address street-address">Малый Знаменский пер., 3/5с4</p>
-                        <a class="building-card__more" href="/building-3/">Подробнее
-                            <span class="visually-hidden">, Усадьба Лопухиных</span>
-                        </a>
+                        <img class="building-card__image" src="/a11y-homework/images/building-3.png" alt=""/>
+                        <div class="building-card__title header-2">
+                            <a href="/a11y-homework/buildings/#3">Усадьба Лопухиных</a>
+                        </div>
+                        <p class="building-card__address street-address p-1">Малый Знаменский пер., 3/5с4</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-4.png" alt=""/>
-                        <h3 class="building-card__title">УЧЕБНЫЙ МУЗЕЙ</h3>
-                        <p class="building-card__address street-address">ул. Чаянова, 15</p>
-                        <a class="building-card__more" href="/building-4/">Подробнее
-                            <span class="visually-hidden">, Учебный музей</span>
-                        </a>
+                        <img class="building-card__image" src="/a11y-homework/images/building-4.png" alt=""/>
+                        <div class="building-card__title header-2">
+                            <a href="/a11y-homework/buildings/#4">Учебный музей</a>
+                        </div>
+                        <p class="building-card__address street-address p-1">ул. Чаянова, 15</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-5.png" alt=""/>
-                        <h3 class="building-card__title">ОТДЕЛ ЛИЧНЫХ КОЛЛЕКЦИЙ</h3>
-                        <p class="building-card__address street-address">ул. Волхонка, 10</p>
-                        <a class="building-card__more" href="/building-5/">Подробнее
-                            <span class="visually-hidden">, Отдел личных коллекций</span>
-                        </a>
+                        <img class="building-card__image" src="/a11y-homework/images/building-5.png" alt=""/>
+                        <div class="building-card__title header-2">
+                            <a href="/a11y-homework/buildings/#5">Отдел личных коллекций</a>
+                        </div>
+                        <p class="building-card__address street-address p-1">ул. Волхонка, 10</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-6.png" alt=""/>
-                        <h3 class="building-card__title">ГАЛЕРЕЯ</h3>
-                        <p class="building-card__address street-address">ул. Волхонка, 14</p>
-                        <a class="building-card__more" href="/building-6/">Подробнее
-                            <span class="visually-hidden">, Галерея</span>
-                        </a>
+                        <img class="building-card__image" src="/a11y-homework/images/building-6.png" alt=""/>
+                        <div class="building-card__title header-2">
+                            <a href="/a11y-homework/buildings/#6">Галерея</a>
+                        </div>
+                        <p class="building-card__address street-address p-1">ул. Волхонка, 14</p>
                     </div>
                 </li>
             </ul>
         </section>
-        <section class="museum-info__panel" hidden id="panel2" role="tabpanel" aria-labelledby="heading2">
+        <section class="museum-info__panel formatted-text" hidden id="panel2" role="tabpanel" aria-labelledby="heading2">
             <p>Государственный музей изобразительных искусств имени А.С. Пушкина – одно из крупнейших в России художественных собраний зарубежного искусства с древнейших времен до наших дней.</p>
 
             <p>В современной экспозиции представлены обширная учебная коллекция тонированных гипсовых слепков с произведений Античности, Средних веков и эпохи Возрождения, а также собрание подлинных произведений живописи, скульптуры, графики и декоративно-прикладного искусства.</p>
@@ -343,27 +333,39 @@
 
             <p>В начале 2017 года музей определил новое направление своей деятельности – Пушкинский XXI, – ориентированное на современное российское и западное искусство во всех аспектах – выставочном, образовательном и исследовательском. Таким образом, ГМИИ им. А.С. Пушкина представляет собой открытую, интерактивную сцену, демонстрирующую развитие мировой культуры с древности до наших дней, живое, знакомое с детства пространство для получения знаний и общения.</p>
 
-            <a href="/history/">Читать далее
-                <span class="visually-hidden">, История</span>
-            </a>
+            <p>
+                <a href="/a11y-homework/history/">Больше об истории музея</a>
+            </p>
         </section>
     </div>
 </div>
 
 
+<div class="page__section">
+    <h2 class="page__section-title header-1">
+        Экскурсии и лекции в прямом эфире
+    </h2>
+    <div class="formatted-text">
+        <p>С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям — экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте. Встречи будут проходить в прямом эфире на платформе Zoom; предусмотрен формат живого общения с возможностью задавать вопросы экскурсоводу (лектору).</p>
+        <p>
+            <a href="/a11y-homework/virtual/">Подробнее о виртуальных мероприятиях.</a>
+        </p>
 
+        <p>Мы будем благодарны за любое <a href="/a11y-homework/donate/">пожертвование</a>. Все поступившие средства будут направлены на организацию онлайн-проектов для наших посетителей.</p>
+    </div>
+</div>
 
 
 
         </main>
 
-        <footer class="footer">
+        <footer class="footer" lang="ru" >
             <div class="footer__inner">
                 <div class="footer__left">
                     <div class="footer__menu">
-                        <div class="footer__menu-item p-1"><a href="/accessible/">Посетителям с инвалидностью</a></div>
-                        <div class="footer__menu-item p-1"><a href="/tickets/">Билеты и льготы</a></div>
-                        <div class="footer__menu-item p-1"><a href="/corruption/">Противодействие коррупции</a></div>
+                        <div class="footer__menu-item p-1"><a href="/a11y-homework/accessible/">Посетителям с инвалидностью</a></div>
+                        <div class="footer__menu-item p-1"><a href="/a11y-homework/privileges/">Билеты и льготы</a></div>
+                        <div class="footer__menu-item p-1"><a href="/a11y-homework/corruption/">Противодействие коррупции</a></div>
                     </div>
 
                     <div class="footer__networks">
@@ -385,9 +387,8 @@
                     </div>
                 </div>
 
-
                 <div class="footer__right">
-                    <form class="subscribe-form" aria-labelledby="subscribe-title">
+                    <form class="subscribe-form" id="subscribe-form" aria-labelledby="subscribe-title">
                         <div class="subscribe-form__title header-3" id="subscribe-title">Подписка на новости</div>
                         <div class="subscribe-form__control subscribe-form__control--email">
                             <label class="subscribe-form__email-label p-3" for="subscribe-email">E-mail</label>
@@ -401,7 +402,7 @@
                                 Согласие на обработку персональных данных
                             </span>
                         </label>
-                        <button class="subscribe-form__action" type="submit">Подписаться</button>
+                        <button class="subscribe-form__action" id="subscribe-button" type="submit">Подписаться</button>
                     </form>
                 </div>
             </div>
@@ -410,7 +411,7 @@
         <div class="modal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal-login-title" id="modal-login" hidden>
             <div class="modal__content">
                 <div class="dialog">
-                    <button class="dialog__close" onClick="closeAuthDialog()">
+                    <button class="dialog__close" onClick="closeLoginDialog()">
                         <span class="visually-hidden">Закрыть</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M13.414 12l7.293-7.293a1 1 0 00-1.414-1.414L12 10.586 4.707 3.293a1 1 0 00-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 101.414 1.414L12 13.414l7.293 7.293a1 1 0 101.414-1.414L13.414 12z" fill="currentColor" /></svg>
                     </button>
@@ -441,7 +442,7 @@
         <div class="modal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal-logout-title" id="modal-logout" hidden>
             <div class="modal__content">
                 <div class="dialog">
-                    <button class="dialog__close" onClick="closeAuthDialog()">
+                    <button class="dialog__close" onClick="closeLogoutDialog()">
                         <span class="visually-hidden">Закрыть</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M13.414 12l7.293-7.293a1 1 0 00-1.414-1.414L12 10.586 4.707 3.293a1 1 0 00-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 101.414 1.414L12 13.414l7.293 7.293a1 1 0 101.414-1.414L13.414 12z" fill="currentColor" /></svg>
                     </button>
@@ -453,6 +454,29 @@
                                 <button class="dialog__action dialog__action--primary" type="submit">Выйти</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal-subscribe-title" id="modal-subscribe" hidden>
+            <div class="modal__content">
+                <div class="dialog">
+                    <button class="dialog__close" onClick="closeSubscribeDialog()">
+                        <span class="visually-hidden">Закрыть</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M13.414 12l7.293-7.293a1 1 0 00-1.414-1.414L12 10.586 4.707 3.293a1 1 0 00-1.414 1.414L10.586 12l-7.293 7.293a1 1 0 101.414 1.414L12 13.414l7.293 7.293a1 1 0 101.414-1.414L13.414 12z" fill="currentColor" /></svg>
+                    </button>
+                    <div class="dialog__content">
+                        <h2 class="dialog__title header-1" id="modal-subscribe-title">Подтверждение подписки</h2>
+                        <div class="dialog__subtitle p-1 formatted-text">
+                            <p>Спасибо за интерес к музею! Мы отправили вам письмо для подтверждения e-mail.</p>
+                            <p>Проверьте, пожалуйста, ваш почтовый ящик <span id="email-address"></span>, пройдите по специальной ссылке оттуда, и ждите интересных новостей от нас.</p>
+                        </div>
+                        <div class="dialog__form">
+                            <div class="dialog__actions">
+                                <button class="dialog__action dialog__action--primary" onClick="closeSubscribeDialog()" type="button">Закрыть</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -479,7 +503,7 @@
 
             renderAuthBlock();
         </script>
-        <script async src="/scripts/index-8cbb6c9f62.js"></script>
+        <script async src="/a11y-homework/scripts/index-0e0ac657a3.js"></script>
 
     </body>
 </html>

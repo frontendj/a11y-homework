@@ -19,8 +19,8 @@
 
 .promo__arrow {
     position: absolute;
-    top: 50%;
     transform: translateY(-50%);
+    top: 50%;
     border: 0;
     appearance: none;
     cursor: pointer;
@@ -30,10 +30,12 @@
     border-radius: 8px;
     padding: var(--space-xs) 0;
 
+
     > svg {
         width: var(--space-2xl);
         height: var(--space-2xl);
         display: block;
+        transition: transform .2s;
     }
 
     &:hover {
@@ -44,10 +46,20 @@
 .promo__arrow--prev {
     left: 0;
 
+    &:active svg,
+    &:hover svg {
+        transform: translateX(-10px);
+    }
+
 }
 
 .promo__arrow--next {
     right: 0;
+
+    &:active svg,
+    &:hover svg {
+        transform:translateX(10px);
+    }
 }
 
 .promo__content {

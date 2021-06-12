@@ -16,9 +16,17 @@
     border-radius: 8px;
     cursor: pointer;
     background-color: transparent;
+    border: 1px solid transparent;
+
+    &:active,
+    &:hover {
+        border-color: var(--color-gray);
+    }
 
     &.is-active {
         background-color: var(--color-secondary);
+        border-color: transparent;
+        pointer-events: none;
     }
 
     & + & {

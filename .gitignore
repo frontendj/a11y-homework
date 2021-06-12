@@ -1,8 +1,8 @@
 node_modules/
 package-lock.json
 example.scss
-src/styles/index.css
-src/styles/index.css.map
 .DS_Store
 yarn-error.log
 _site
+index.css
+index.css.map

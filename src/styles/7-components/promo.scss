@@ -10,7 +10,7 @@
     position: absolute;
     width: calc(100% + 2 * var(--space-2xl) + 2 * var(--space-xs));
     height: 100%;
-    max-width: 100vw;
+    max-width: calc(100vw - 20px);
     transform: translateX(-50%);
     left: 50%;
     pointer-events: none;

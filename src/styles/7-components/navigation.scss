@@ -2,12 +2,11 @@
     display: flex;
     align-items: center;
     margin-left: -8px;
+    flex-wrap: wrap;
 }
 
 .navigation__item {
-    & + & {
-        margin-left: var(--space-l);
-    }
+    margin-right: var(--space-l);
 
     a {
         --color-link: var(--color-text);
@@ -31,24 +30,36 @@
     }
 
     &:last-child {
-        margin-left: auto;
+        margin-right: 0;
 
         a {
             --color-link: darkred;
             --color-border: darkred;
-            --color-hover: darkred;
-            --color-border-hover: darkred;
+            --color-hover: var(--color-primary);
+            --color-border-hover: rgba(255, 255, 255, 0);
 
             @include simpleLink();
 
-            min-height: 32px;
             display: inline-flex;
             align-items: center;
-            padding: var(--space-2xs) var(--space-xs);
+            padding: 4px 8px;
             cursor: pointer;
-            border-radius: 8px;
+            border-radius: 4px;
             background-color: transparent;
             border: 1px solid darkred;
+
+            &:hover {
+                border-color: var(--color-primary);
+            }
+        }
+
+        &.is-active a {
+            --color-link: #fff;
+            --color-hover: #fff;
+
+            text-decoration: none;
+            background-color: #000;
+            border-color: transparent;
         }
     }
 }

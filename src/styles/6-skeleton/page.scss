@@ -21,4 +21,15 @@
 
 .page__section-title {
     margin-bottom: var(--space-l);
+
+    a {
+        --color-link: var(--color-text);
+        --color-border: rgba(0, 0, 0, .3);
+        --color-hover: var(--color-primary);
+        --color-border-hover: rgba(0, 0, 0, 0);
+
+        @include simpleLink();
+
+        text-decoration-thickness: 2px;
+    }
 }

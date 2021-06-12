@@ -1,8 +1,8 @@
 .buildings-list {
-    --list-gap-horizontal: var(--space-xl);
-    --list-gap-vertical: var(--space-2xl);
+    --list-gap-horizontal: var(--space-l);
+    --list-gap-vertical: var(--space-xl);
     display: grid;
     grid-row-gap: var(--list-gap-horizontal);
     grid-column-gap: var(--list-gap-vertical);
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(clamp(300px, 30%, 400px), 1fr));
 }

@@ -3,13 +3,16 @@
 }
 
 .events__list {
-    display: flex;
-    flex-wrap: wrap;
-    width: calc(100% + var(--space-l));
+    --list-gap-horizontal: var(--space-l);
+    --list-gap-vertical: var(--space-xl);
+    display: grid;
+    grid-row-gap: var(--list-gap-horizontal);
+    grid-column-gap: var(--list-gap-vertical);
+    grid-template-columns: repeat(auto-fill, minmax(clamp(300px, 30%, 400px), 1fr));
 }
 
 .events__item {
-    width: calc((100% - 3 * var(--space-l)) / 3);
+    width: 100%;
     margin-right: var(--space-l);
 }
 

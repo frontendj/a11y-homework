@@ -1,59 +1,49 @@
 ---
 layout: base.njk
 ---
-<article class="post">
-    <h1 class="post__title header-1">{{ title }}</h1>
+<article class="article">
+    <h1 class="article__title header-1">{{ title }}</h1>
 
-    <div class="post__info p-1">
-        {%- if not page.noDate %}
-            <span class="visually-hidden">Published on</span>
-            <time class="post__date" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
-        {%- endif %}
+    <div class="article__info p-1">
+        Период проведения: {{ articleDates }}
     </div>
 
-    <div class="post__content formatted-text">
+    <div class="article__content formatted-text">
         {{ content | safe }}
+    </div>
+
+    <div class="article__action">
+        <a href="{{ '/tickets/' | url }}?title={{ title | encodeUri }}">
+            Купить билет
+        </a>
     </div>
 
     {%- set nextPost = collections.events | getNextCollectionItem(page) %}
     {%- set previousPost = collections.events | getPreviousCollectionItem(page) %}
     {%- if nextPost or previousPost or tags %}
-    <div class="post__footer">
-        {%- if tags %}
-        <div class="post__tags p-1">
-            <span class="visually-hidden">Post tags</span>
-            {%- for tag in tags | filterTagList -%}
-                {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-                <a href="{{ tagUrl | url }}" class="post__tag link">
-                    <span class="visually-hidden">Tag</span>
-                    <span aria-hidden="true">#</span>{{ tag }}
-                </a>
-            {%- endfor %}
-        </div>
-        {%- endif %}
+        <div class="article__footer">
+            <nav aria-labelledby="article-footer-title">
+                <h2 class="article__footer-title header-3" id="article-footer-title">Похожие выставки</h2>
 
-        <div class="post__navigation">
-            <nav aria-label="Post navigation">
-                <ul class="content-nav">
+                <div class="content-nav">
                     {%- if nextPost %}
-                        <li class="content-nav__item content-nav__item--next p-1">
-                            <a class="content-nav__link link link--has-visited" href="{{ nextPost.url | url }}" aria-label="Next post — {{ nextPost.data.title }}">
+                        <div class="content-nav__item p-1">
+                            <a class="content-nav__link link link--has-visited" href="{{ nextPost.url | url }}">
                                 {{ nextPost.data.title }}
                             </a>
-                        </li>
+                        </div>
                     {% endif %}
 
                     {%- if previousPost %}
-                        <li class="content-nav__item content-nav__item--prev p-1">
-                            <a class="content-nav__link link link--has-visited" href="{{ previousPost.url | url }}" aria-label="Previous post — {{ previousPost.data.title }}">
+                        <div class="content-nav__item p-1">
+                            <a class="content-nav__link link link--has-visited" href="{{ previousPost.url | url }}">
                                 {{ previousPost.data.title }}
                             </a>
-                        </li>
+                        </div>
                     {% endif %}
-                </ul>
+                </div>
             </nav>
         </div>
-    </div>
     {%- endif %}
 </article>
 

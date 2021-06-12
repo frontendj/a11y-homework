@@ -98,40 +98,14 @@
     pointer-events: none;
 }
 
-.promo__contrast {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    background: #fff;
-    z-index: 1;
-    content: '';
-    opacity: 0.4;
-    padding: 0 var(--space-m);
-
-    .promo__action {
-        opacity: 0;
-        pointer-events: none;
-    }
-}
-
-.promo__action {
-    margin-top: auto;
-    z-index: 1;
-    position: relative;
-    min-height: 58px;
-    display: inline-flex;
-    vertical-align: top;
-    align-items: center;
-    padding: 0 var(--space-m);
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    background-color: var(--color-primary);
-    color: var(--color-primary-contrast);
-    box-shadow: 0 0 2px 2px #fff;
-
-    &:hover {
-        color: var(--color-primary-contrast);
+.promo__description {
+    a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
     }
 }

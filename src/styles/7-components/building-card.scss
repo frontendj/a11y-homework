@@ -1,3 +1,7 @@
+.building-card {
+    position: relative;
+}
+
 .building-card__image {
     margin-bottom: var(--space-m);
     width: 100%;
@@ -19,4 +23,34 @@
     --color-border-hover: rgba(0, 0, 0, 0);
 
     @include simpleLink();
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        right: -10px;
+        bottom: -10px;
+        border-radius: 8px;
+        border: 2px solid transparent;
+    }
+
+    &:hover::before {
+        border-color: var(--color-primary);
+    }
+
+    &:focus {
+        --color-link: var(--color-primary);
+        --color-border: rgba(0, 0, 0, 0);
+
+        outline: none;
+
+        &::before {
+            border-color: var(--color-primary);
+        }
+    }
+
+    &:focus:not(:focus-visible) {
+        outline: 0;
+    }
 }

@@ -17,6 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ generatedTitle }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
+        <meta name="robots" content="noindex">
 
         {% include 'favicon.njk' %}
 
@@ -96,7 +97,7 @@
                 <div class="footer__left">
                     <div class="footer__menu">
                         <div class="footer__menu-item p-1"><a href="{{ '/accessible/' | url }}">Посетителям с инвалидностью</a></div>
-                        <div class="footer__menu-item p-1"><a href="{{ '/tickets/' | url }}">Билеты и льготы</a></div>
+                        <div class="footer__menu-item p-1"><a href="{{ '/privileges/' | url }}">Билеты и льготы</a></div>
                         <div class="footer__menu-item p-1"><a href="{{ '/corruption/' | url }}">Противодействие коррупции</a></div>
                     </div>
 

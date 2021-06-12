@@ -8,10 +8,37 @@ eleventyNavigation:
 <article class="article">
     <h1 class="article__title header-1">{{ title }}</h1>
 
-    <div class="article__content formatted-text">
-        <p>Эта страница в разработке</p>
-        <p>
-            <a href="{{ '/' | url }}">Вернуться на главную</a>
-        </p>
+    <div class="article__content">
+        {% set eventslist = collections.events | head(-30) %}
+        {% set eventslistCounter = collections.events | length %}
+        <div class="events events--vertical">
+            <ul class="events__list" id="events-list">
+                {% for event in eventslist | reverse %}
+                    <li class="events__item" data-filter="{{ event.data.filter }}">
+                        <div class="event-card event-card--horizontal">
+                            <div class="event-card__content">
+                                <a class="event-card__link header-2" href="{{ event.url | url }}">
+                                    {% if event.data.inList %}
+                                        <img class="event-card__image" src="{{ event.url | url }}cover-small.jpg" alt=""/>
+                                    {% elseif event.data.inPromo %}
+                                        <img class="event-card__image" src="{{ event.url | url }}cover-big.jpg" alt=""/>
+                                    {% endif %}
+                                    <span class="event-card__title">
+                                        {{ event.data.title }}
+                                    </span>
+                                </a>
+
+                                <div class="event-card__dates p-1">{{ event.data.dates }}</div>
+
+                                <a href="{{ '/tickets/' | url }}?title={{ event.data.title | encodeUri }}" class="event-card__action">
+                                    Купить билет
+                                    <span class="visually-hidden">, {% if event.data.titleShort %} {{ event.data.titleShort }} {% else %} {{ event.data.title }} {% endif %}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </article>

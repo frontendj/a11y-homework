@@ -1,4 +1,6 @@
 .formatted-text {
+    max-width: 50em;
+
     @include apply-typography-p1();
 
     * + * {

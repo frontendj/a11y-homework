@@ -1,0 +1,28 @@
+.buy {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buy__action {
+    --color-link: var(--color-primary-contrast);
+    --color-border: rgba(255, 255, 255, .5);
+    --color-hover: var(--color-primary-contrast);
+    --color-border-hover: rgba(255, 255, 255, 0);
+
+    @include simpleLink();
+
+    min-height: 44px;
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    padding: var(--space-2xs) var(--space-s);
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    margin-right: var(--space-l);
+}
+
+.buy__action--secondary {
+    background-color: darkred;
+}

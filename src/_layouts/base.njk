@@ -108,13 +108,15 @@
         </header>
 
         <nav class="navigation" aria-label="Основная" {% if lang == 'en' %} hidden {% endif %}>
-            {%- for entry in collections.all | eleventyNavigation %}
-                {% if entry.url !== "/" %}
-                    <div class="navigation__item p-1 {% if entry.url == page.url %} is-active {% endif %}">
-                        <a href="{{ entry.url | url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
-                    </div>
-                {% endif %}
-            {%- endfor %}
+            <ul class="navigation__list">
+                {%- for entry in collections.all | eleventyNavigation %}
+                    {% if entry.url !== "/" %}
+                        <li class="navigation__item p-1 {% if entry.url == page.url %} is-active {% endif %}">
+                            <a href="{{ entry.url | url }}" {% if entry.url == page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
+                        </li>
+                    {% endif %}
+                {%- endfor %}
+            </ul>
         </nav>
 
         <main class="page__content" id="main" tabindex="-1">

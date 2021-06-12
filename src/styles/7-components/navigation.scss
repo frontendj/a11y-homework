@@ -1,12 +1,15 @@
 .navigation {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     padding: var(--page-gap-vertical) var(--page-gap-horizontal) 0;
     max-width: calc(var(--page-max-width) + 2 * var(--page-gap-horizontal));
     width: 100%;
     margin: var(--space-2xl) auto 0;
-    transform: translateX(-8px);
+}
+
+.navigation__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -8px;
 }
 
 .navigation__item {

@@ -17,6 +17,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ generatedTitle }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
+        {% if not isdevelopment %}
+            <base href="/a11y-homework/">
+        {% endif %}
 
         {% include 'favicon.njk' %}
 

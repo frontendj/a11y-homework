@@ -21,7 +21,7 @@
                         <div class="event-card__dates p-1">{{ event.data.dates }}</div>
                     </div>
 
-                    <a href="/tickets/" class="event-card__action">
+                    <a href="{{ '/tickets/' | url }}" class="event-card__action">
                         Купить билет
                         <span class="visually-hidden">, {% if event.data.titleShort %} {{ event.data.titleShort }} {% else %} {{ event.data.title }} {% endif %}</span>
                     </a>

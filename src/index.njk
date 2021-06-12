@@ -25,7 +25,7 @@ title: Пушкинский музей
         </div>
         <ul class="promo__list" role="presentation" id="promo-slides">
             <li class="promo__item is-active" role="presentation" data-title="От Дюрера до Матисса">
-                <img class="promo__image" src="/images/promo-1.jpg" alt="" />
+                <img class="promo__image" src="{{ '/images/promo-1.jpg' | url }}" alt="" />
 
                 <div class="promo__content" style="--red: 189; --green: 186; --blue: 171;">
                     <div class="promo__description">
@@ -37,14 +37,14 @@ title: Пушкинский музей
                     <div class="promo__contrast">
                         <div class="promo__action" aria-hidden="true">Купить билет</div>
                     </div>
-                    <a class="promo__action" href="/events/">
+                    <a class="promo__action" href="{{ '/events/' | url }}">
                         Купить билет
                         <span class="visually-hidden">, От Дюрера до Матисса</span>
                     </a>
                 </div>
             </li>
             <li class="promo__item" role="presentation"  data-title="Московская жизнь Джамбаттисты Тьеполо" tabindex="-1" hidden>
-                <img class="promo__image" src="/images/promo-2.jpg" alt="" />
+                <img class="promo__image" src="{{ '/images/promo-2.jpg' | url }}" alt="" />
 
                 <div class="promo__content" style="--red: 57; --green: 36; --blue: 25;">
                     <div class="promo__description">
@@ -56,14 +56,14 @@ title: Пушкинский музей
                     <div class="promo__contrast">
                         <div class="promo__action" aria-hidden="true">Купить билет</div>
                     </div>
-                    <a class="promo__action" href="/events/">
+                    <a class="promo__action" href="{{ '/events/' | url }}">
                         Купить билет
                         <span class="visually-hidden">, Московская жизнь Джамбаттисты Тьеполо и его сына Джандоменико</span>
                     </a>
                 </div>
             </li>
             <li class="promo__item" role="presentation" data-title="Летняя программа «Мусейона»" tabindex="-1" hidden>
-                <img class="promo__image" src="/images/promo-3.jpg" alt="" />
+                <img class="promo__image" src="{{ '/images/promo-3.jpg' | url }}" alt="" />
 
                 <div class="promo__content" style="--red: 114; --green: 135; --blue: 117;">
                     <div class="promo__description">
@@ -74,7 +74,7 @@ title: Пушкинский музей
                     <div class="promo__contrast">
                         <div class="promo__action" aria-hidden="true">Купить билет</div>
                     </div>
-                    <a class="promo__action" href="/events/">
+                    <a class="promo__action" href="{{ '/events/' | url }}">
                         Купить билет
                         <span class="visually-hidden">, Летняя программа «Мусейона»</span>
                     </a>
@@ -87,7 +87,7 @@ title: Пушкинский музей
 
 <div class="page__section">
     <h2 class="page__section-title header-1">
-        <a href="/events/">Выставки и события</a>
+        <a href="{{ '/events/' | url }}">Выставки и события</a>
     </h2>
     {% set eventslist = collections.events | head(-30) %}
     {% set eventslistCounter = collections.events | length %}
@@ -109,60 +109,60 @@ title: Пушкинский музей
             <ul class="buildings-list">
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-1.png" alt=""/>
+                        <img class="building-card__image" src="{{ '/images/building-1.png' | url }}" alt=""/>
                         <h3 class="building-card__title">МЕМОРИАЛЬНАЯ КВАРТИРА С.Т. РИХТЕРА</h3>
                         <p class="building-card__address street-address">ул. Большая Бронная, 2/6, 16 этаж, кв. 58</p>
-                        <a class="building-card__more" href="/building-1/">Подробнее
+                        <a class="building-card__more" href="{{ '/building-1/' | url }}">Подробнее
                             <span class="visually-hidden">, Квартира Рихтера</span>
                         </a>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-2.png" alt=""/>
+                        <img class="building-card__image" src="{{ '/images/building-2.png' | url }}" alt=""/>
                         <h3 class="building-card__title">ЦЭВ «МУСЕЙОН»</h3>
                         <p class="building-card__address"><span class="street-address">Колымажный пер., 6/2, 3</span> (вход с Малого Знаменского переулка)</p>
-                        <a class="building-card__more" href="/building-2/">Подробнее
+                        <a class="building-card__more" href="{{ '/building-2/' | url }}">Подробнее
                             <span class="visually-hidden">, Мусейон</span>
                         </a>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-3.png" alt=""/>
+                        <img class="building-card__image" src="{{ '/images/building-3.png' | url }}" alt=""/>
                         <h3 class="building-card__title">УСАДЬБА ЛОПУХИНЫХ</h3>
                         <p class="building-card__address street-address">Малый Знаменский пер., 3/5с4</p>
-                        <a class="building-card__more" href="/building-3/">Подробнее
+                        <a class="building-card__more" href="{{ '/building-3/' | url }}">Подробнее
                             <span class="visually-hidden">, Усадьба Лопухиных</span>
                         </a>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-4.png" alt=""/>
+                        <img class="building-card__image" src="{{ '/images/building-4.png' | url }}" alt=""/>
                         <h3 class="building-card__title">УЧЕБНЫЙ МУЗЕЙ</h3>
                         <p class="building-card__address street-address">ул. Чаянова, 15</p>
-                        <a class="building-card__more" href="/building-4/">Подробнее
+                        <a class="building-card__more" href="{{ '/building-4/' | url }}">Подробнее
                             <span class="visually-hidden">, Учебный музей</span>
                         </a>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-5.png" alt=""/>
+                        <img class="building-card__image" src="{{ '/images/building-5.png' | url }}" alt=""/>
                         <h3 class="building-card__title">ОТДЕЛ ЛИЧНЫХ КОЛЛЕКЦИЙ</h3>
                         <p class="building-card__address street-address">ул. Волхонка, 10</p>
-                        <a class="building-card__more" href="/building-5/">Подробнее
+                        <a class="building-card__more" href="{{ '/building-5/' | url }}">Подробнее
                             <span class="visually-hidden">, Отдел личных коллекций</span>
                         </a>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
-                        <img class="building-card__image" src="/images/building-6.png" alt=""/>
+                        <img class="building-card__image" src="{{ '/images/building-6.png' | url }}" alt=""/>
                         <h3 class="building-card__title">ГАЛЕРЕЯ</h3>
                         <p class="building-card__address street-address">ул. Волхонка, 14</p>
-                        <a class="building-card__more" href="/building-6/">Подробнее
+                        <a class="building-card__more" href="{{ '/building-6/' | url }}">Подробнее
                             <span class="visually-hidden">, Галерея</span>
                         </a>
                     </div>
@@ -178,7 +178,7 @@ title: Пушкинский музей
 
             <p>В начале 2017 года музей определил новое направление своей деятельности – Пушкинский XXI, – ориентированное на современное российское и западное искусство во всех аспектах – выставочном, образовательном и исследовательском. Таким образом, ГМИИ им. А.С. Пушкина представляет собой открытую, интерактивную сцену, демонстрирующую развитие мировой культуры с древности до наших дней, живое, знакомое с детства пространство для получения знаний и общения.</p>
 
-            <a href="/history/">Читать далее
+            <a href="{{ '/history/' | url }}">Читать далее
                 <span class="visually-hidden">, История</span>
             </a>
         </section>

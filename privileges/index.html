@@ -15,7 +15,7 @@
 
 
 <!doctype html>
-<html lang=ru dir="ltr">
+<html lang="ru" dir="ltr">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,28 +28,34 @@
 
 
 
-        <link rel="stylesheet" href="/a11y-homework/styles/index-69b00311b4.css" media="all">
+        <link rel="stylesheet" href="/a11y-homework/styles/index-d4e47968f0.css" media="all">
     </head>
     <body>
-        <a class="skip-link" href="#main">
-             К основному контенту 
-        </a>
+        <noscript>
+            <div class="noscript">
+                Для работы этой страницы необходим Javascript. Пожалуйста, включите его для наиболее комфортной работы
+            </div>
+        </noscript>
+
+        <nav aria-labelledby="skip-to-main">
+            <a class="skip-link" href="#main" id="skip-to-main">
+                 К основному контенту 
+            </a>
+        </nav>
+
         <header class="header">
             <div class="header__top">
                 <div class="header__home">
-                    <a class="header__home-link" href=" /a11y-homework/ " title="Пушкинский музей">
-                        <img class="header__logo" src="/a11y-homework/images/logo.svg" width="200" height="42" alt="">
-                        <span class="visually-hidden">
-                             Пушкинский музей 
-                        </span>
+                    <a class="header__home-link" href=" /a11y-homework/ " >
+                        <img class="header__logo" src="/a11y-homework/images/logo.svg" width="200" height="42" role="img" title="Государственный музей изобразительных искусств имени А. С. Пушкина" alt="Государственный музей изобразительных искусств имени А. С. Пушкина">
                     </a>
                 </div>
 
                 
                     <div class="header__search">
-                        <form class="search-field" action="/search/" method="get">
+                        <form class="search-field" action="/a11y-homework/search/" method="get">
                             <label class="search-field__label" for="search">Поиск по сайту</label>
-                            <input class="search-field__input" type="search" id="search" name="search"/>
+                            <input class="search-field__input" type="search" id="search" name="search" autocomplete="off" />
                             <button class="search-field__action">
                                 <span class="visually-hidden">Искать</span>
                                 <svg width="20" height="20" focusable="false"><path d="M8.02.5C3.6.5 0 3.95 0 8.2c0 4.24 3.6 7.69 8.02 7.69a8.2 8.2 0 004.69-1.47l5.24 5.03a.9.9 0 001.23 0l.56-.54a.81.81 0 000-1.18l-5.23-5.03a7.44 7.44 0 001.52-4.5c0-4.25-3.6-7.7-8.01-7.7zM2.54 8.2c0-2.9 2.46-5.26 5.48-5.26a5.38 5.38 0 015.47 5.25c0 2.9-2.45 5.26-5.47 5.26A5.38 5.38 0 012.54 8.2z" /></svg>
@@ -61,9 +67,9 @@
                 <div class="header__language">
                     <nav class="language-switcher" aria-label="Выбрать язык">
                         
-                            <div class="language-switcher__item is-active" title="Русский">
-                                <span aria-hidden="true">Рус</span>
-                                <span class="visually-hidden">Русский</span>
+                            <div class="language-switcher__item is-active">
+                                <span aria-hidden="true">Рус</span><span class="visually-hidden">ский</span>
+
                             </div>
                             <a class="language-switcher__item" href="/a11y-homework/en/" hreflang="en">
                                 <span aria-hidden="true">Eng</span>
@@ -87,40 +93,45 @@
                     </button>
                 </div>
             </div>
-
-            <div class="header__navigation" >
-                <nav class="navigation">
-                        
-                        
-                            <div class="navigation__item p-1 ">
-                                <a href="/a11y-homework/about/" >Музей</a>
-                            </div>
-                        
-                        
-                            <div class="navigation__item p-1 ">
-                                <a href="/a11y-homework/visitors/" >Посетителям</a>
-                            </div>
-                        
-                        
-                            <div class="navigation__item p-1 ">
-                                <a href="/a11y-homework/events/" >Выставки и события</a>
-                            </div>
-                        
-                        
-                            <div class="navigation__item p-1 ">
-                                <a href="/a11y-homework/shop/" >Онлайн-магазин</a>
-                            </div>
-                        
-                        
-                            <div class="navigation__item p-1 ">
-                                <a href="/a11y-homework/membership/" >Стать другом</a>
-                            </div>
-                        
-                </nav>
-            </div>
         </header>
 
-        <main class="page__content" id="main">
+        <nav class="navigation" aria-label="Основная" >
+            <ul class="navigation__list">
+                    
+                    
+                        <li class="navigation__item p-1 ">
+                            <a href="/a11y-homework/tickets/" >Билеты</a>
+                        </li>
+                    
+                    
+                        <li class="navigation__item p-1 ">
+                            <a href="/a11y-homework/about/" >Музей</a>
+                        </li>
+                    
+                    
+                        <li class="navigation__item p-1 ">
+                            <a href="/a11y-homework/visitors/" >Посетителям</a>
+                        </li>
+                    
+                    
+                        <li class="navigation__item p-1 ">
+                            <a href="/a11y-homework/events/" >Выставки и события</a>
+                        </li>
+                    
+                    
+                        <li class="navigation__item p-1 ">
+                            <a href="/a11y-homework/shop/" >Онлайн-магазин</a>
+                        </li>
+                    
+                    
+                        <li class="navigation__item p-1 ">
+                            <a href="/a11y-homework/membership/" >Стать другом</a>
+                        </li>
+                    
+            </ul>
+        </nav>
+
+        <main class="page__content" id="main" tabindex="-1">
             <article class="article">
     <h1 class="article__title header-1">Билеты и льготы</h1>
 
@@ -148,26 +159,26 @@
                         <div class="footer__networks-items">
                             <a class="footer__networks-item" href="mailto:mail@pushkinskiy.ru" title="Наша почта" aria-labelledby="social-label-1">
                                 <span class="visually-hidden" id="social-label-1">Наша почта</span>
-                                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0a20 20 0 110 40 20 20 0 010-40zm3.26 21.33c-.15-.13-.23-.13-.38 0-.44.4-.9.77-1.34 1.15-1.06.9-2.52.9-3.56-.01-.44-.4-.9-.76-1.34-1.15-.13-.11-.2-.12-.33 0l-6.5 5.98c-.05.05-.14.08-.12.2h20.15c-.01-.12-.09-.15-.14-.2l-1.94-1.8-4.5-4.17zm8.18-7.27c-.08-.03-.14.07-.2.12-2.2 1.9-4.41 3.79-6.63 5.67-.19.16-.17.24 0 .39l4.3 3.97 2.27 2.1c.14.13.2.12.26-.07.05-.19.05-.38.05-.58V14.3c0-.08.04-.19-.05-.23zm-23.32 0l-.04.02c-.13.07-.06.32-.06.5V25.4c0 .23.01.47.04.7 0 .1 0 .26.13.3.09.02.16-.1.23-.17l6.53-6c.15-.14.17-.22 0-.36l-6.47-5.52c-.13-.1-.27-.34-.4-.27l.04-.01zm11.64-1.56h-9.9c-.17 0-.34 0-.51.05-.06.02-.15.02-.16.1-.01.05.06.08.1.12l.92.78 8.84 7.56c.56.48.9.47 1.46-.01l9.04-7.74.82-.72c-.24-.15-.48-.14-.72-.14H9.86h9.9z" fill="currentColor" /></svg>
+                                <svg width="40" height="40" focusable="false"><path d="M20 0a20 20 0 110 40 20 20 0 010-40zm3.26 21.33c-.15-.13-.23-.13-.38 0-.44.4-.9.77-1.34 1.15-1.06.9-2.52.9-3.56-.01-.44-.4-.9-.76-1.34-1.15-.13-.11-.2-.12-.33 0l-6.5 5.98c-.05.05-.14.08-.12.2h20.15c-.01-.12-.09-.15-.14-.2l-1.94-1.8-4.5-4.17zm8.18-7.27c-.08-.03-.14.07-.2.12-2.2 1.9-4.41 3.79-6.63 5.67-.19.16-.17.24 0 .39l4.3 3.97 2.27 2.1c.14.13.2.12.26-.07.05-.19.05-.38.05-.58V14.3c0-.08.04-.19-.05-.23zm-23.32 0l-.04.02c-.13.07-.06.32-.06.5V25.4c0 .23.01.47.04.7 0 .1 0 .26.13.3.09.02.16-.1.23-.17l6.53-6c.15-.14.17-.22 0-.36l-6.47-5.52c-.13-.1-.27-.34-.4-.27l.04-.01zm11.64-1.56h-9.9c-.17 0-.34 0-.51.05-.06.02-.15.02-.16.1-.01.05.06.08.1.12l.92.78 8.84 7.56c.56.48.9.47 1.46-.01l9.04-7.74.82-.72c-.24-.15-.48-.14-.72-.14H9.86h9.9z" fill="currentColor" /></svg>
                             </a>
                             <a class="footer__networks-item" href="https://t.me/theartsmuseum" target="_blank" rel="noopener noreferrer" title="Telegram, откроется в новом окне" aria-labelledby="social-label-2">
                                 <span class="visually-hidden" id="social-label-2">Telegram, откроется в новом окне</span>
-                                <svg width="41" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M20.62 0a20 20 0 110 40 20 20 0 010-40zm9.74 10.73c-.2.03-.45.03-.67.1l-.8.3-.78.33c-.29.11-.57.24-.85.36l-1.64.65-.88.37-1.6.66-.85.36-1.26.5-.89.37-1.32.53c-.27.1-.54.24-.82.35l-1.77.71-.74.3-1.71.68-.91.37-1.25.5c-.29.13-.57.25-.86.36l-1.6.64-.99.4c-.48.2-.96.38-1.36.72-.17.15-.33.33-.35.57a.8.8 0 00.45.74c.3.12.6.21.9.3.76.25 1.53.5 2.3.73.53.17 1.07.3 1.61.45.5.13 1 .15 1.5.06.42-.07.8-.22 1.15-.46.55-.37 1.12-.72 1.68-1.09l1.66-1.1 1.4-.93 1.47-.98 1.13-.76c.61-.42 1.23-.84 1.85-1.23.45-.29.9-.58 1.44-.7.15-.04.3-.05.36.06.06.1.07.29.01.39-.15.28-.32.57-.54.8-.5.53-1.02 1.02-1.54 1.52l-1.96 1.84-2.64 2.45c-.36.33-.73.65-1.05 1.02a.94.94 0 00-.13 1.07c.13.27.32.47.54.64.51.4 1.03.77 1.55 1.15l.83.59 1.5.98 1.44.94c.4.26.8.54 1.22.8.37.23.74.45 1.14.64.32.15.67.23 1.01.34.43.15.85.14 1.23-.07.47-.26.71-.7.83-1.18.12-.46.17-.94.24-1.41l.1-.7.27-1.59.09-.59.2-1.15c.06-.41.1-.82.17-1.22l.36-2.13.1-.68.26-1.57c.07-.39.11-.79.17-1.18l.29-1.79.16-1.07.28-1.86c.04-.28.05-.56.1-.83.04-.33-.03-.64-.2-.91-.22-.37-.6-.44-1.03-.46z" fill="currentColor" /></svg>
+                                <svg width="40" height="40" focusable="false"><path d="M20.62 0a20 20 0 110 40 20 20 0 010-40zm9.74 10.73c-.2.03-.45.03-.67.1l-.8.3-.78.33c-.29.11-.57.24-.85.36l-1.64.65-.88.37-1.6.66-.85.36-1.26.5-.89.37-1.32.53c-.27.1-.54.24-.82.35l-1.77.71-.74.3-1.71.68-.91.37-1.25.5c-.29.13-.57.25-.86.36l-1.6.64-.99.4c-.48.2-.96.38-1.36.72-.17.15-.33.33-.35.57a.8.8 0 00.45.74c.3.12.6.21.9.3.76.25 1.53.5 2.3.73.53.17 1.07.3 1.61.45.5.13 1 .15 1.5.06.42-.07.8-.22 1.15-.46.55-.37 1.12-.72 1.68-1.09l1.66-1.1 1.4-.93 1.47-.98 1.13-.76c.61-.42 1.23-.84 1.85-1.23.45-.29.9-.58 1.44-.7.15-.04.3-.05.36.06.06.1.07.29.01.39-.15.28-.32.57-.54.8-.5.53-1.02 1.02-1.54 1.52l-1.96 1.84-2.64 2.45c-.36.33-.73.65-1.05 1.02a.94.94 0 00-.13 1.07c.13.27.32.47.54.64.51.4 1.03.77 1.55 1.15l.83.59 1.5.98 1.44.94c.4.26.8.54 1.22.8.37.23.74.45 1.14.64.32.15.67.23 1.01.34.43.15.85.14 1.23-.07.47-.26.71-.7.83-1.18.12-.46.17-.94.24-1.41l.1-.7.27-1.59.09-.59.2-1.15c.06-.41.1-.82.17-1.22l.36-2.13.1-.68.26-1.57c.07-.39.11-.79.17-1.18l.29-1.79.16-1.07.28-1.86c.04-.28.05-.56.1-.83.04-.33-.03-.64-.2-.91-.22-.37-.6-.44-1.03-.46z" fill="currentColor" /></svg>
                             </a>
                             <a class="footer__networks-item" href="https://www.facebook.com/theartsmuseum/" target="_blank" rel="noopener noreferrer"  title="Facebook, откроется в новом окне" aria-labelledby="social-label-3">
                                 <span class="visually-hidden" id="social-label-3">Facebook, откроется в новом окне</span>
-                                <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M20 0a20 20 0 110 40 20 20 0 010-40zm3 7.8c-3.68 0-6.2 2.19-6.2 6.2v3.45h-4.15v4.68h4.16v12.02h4.96V22.13h4.14l.62-4.68h-4.76v-3c0-1.35.39-2.27 2.39-2.27h2.54V7.99c-.44-.06-1.95-.19-3.7-.19z" fill="currentColor" /></svg>
+                                <svg width="40" height="40" focusable="false"><path d="M20 0a20 20 0 110 40 20 20 0 010-40zm3 7.8c-3.68 0-6.2 2.19-6.2 6.2v3.45h-4.15v4.68h4.16v12.02h4.96V22.13h4.14l.62-4.68h-4.76v-3c0-1.35.39-2.27 2.39-2.27h2.54V7.99c-.44-.06-1.95-.19-3.7-.19z" fill="currentColor" /></svg>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="footer__right">
-                    <form class="subscribe-form" id="subscribe-form" aria-labelledby="subscribe-title">
+                    <form class="subscribe-form" id="subscribe-form" aria-labelledby="subscribe-title" autocomplete="on">
                         <div class="subscribe-form__title header-3" id="subscribe-title">Подписка на новости</div>
                         <div class="subscribe-form__control subscribe-form__control--email">
                             <label class="subscribe-form__email-label p-3" for="subscribe-email">E-mail</label>
-                            <input class="subscribe-form__email-field p-2" type="email" id="subscribe-email" required />
+                            <input class="subscribe-form__email-field p-2" type="email" id="subscribe-email" required autocomplete="email" />
                         </div>
                         <label class="subscribe-form__control subscribe-form__control--agreement p-2">
                             <span class="subscribe-form__checkbox">
@@ -192,7 +203,7 @@
                     </button>
                     <div class="dialog__content">
                         <h2 class="dialog__title header-1" id="modal-login-title">Вход</h2>
-                        <form class="dialog__form" id="auth-form" action="/profile/">
+                        <form class="dialog__form" id="auth-form" action="/a11y-homework/profile/">
                             <div class="dialog__control">
                                 <div class="dialog__label p-2">
                                     <label for="login">Логин</label>
@@ -224,7 +235,7 @@
                     <div class="dialog__content">
                         <h2 class="dialog__title header-1" id="modal-logout-title">Выход из личного кабинета</h2>
                         <p class="dialog__subtitle header-3">Вы точно хотите выйти?</p>
-                        <form class="dialog__form" id="logout-form" action="/">
+                        <form class="dialog__form" id="logout-form" action="/a11y-homework/">
                             <div class="dialog__actions">
                                 <button class="dialog__action dialog__action--primary" type="submit">Выйти</button>
                             </div>

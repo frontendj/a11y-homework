@@ -92,20 +92,19 @@ module.exports = function(eleventyConfig) {
     });
 
     // Plugins
-    eleventyConfig.addPlugin(require('@11ty/eleventy-plugin-rss'));
     eleventyConfig.addPlugin(require('@11ty/eleventy-navigation'));
-    eleventyConfig.addPlugin(criticalCss, {
-        // Inline the generated critical-path CSS
-        // - true generates HTML
-        // - false generates CSS
-        inline: true,
-        // Viewport width
-        width: 1200,
-        // Viewport height
-        height: 900,
-        // Minify critical-path CSS when inlining
-        minify: true,
-    });
+    // eleventyConfig.addPlugin(criticalCss, {
+    //     // Inline the generated critical-path CSS
+    //     // - true generates HTML
+    //     // - false generates CSS
+    //     inline: true,
+    //     // Viewport width
+    //     width: 1200,
+    //     // Viewport height
+    //     height: 900,
+    //     // Minify critical-path CSS when inlining
+    //     minify: true,
+    // });
 
     // Customize Markdown library and settings:
     const markdownIt = require('markdown-it');

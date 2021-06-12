@@ -29,4 +29,26 @@
         text-decoration: none;
         background-color: #000;
     }
+
+    &:last-child {
+        margin-left: auto;
+
+        a {
+            --color-link: darkred;
+            --color-border: darkred;
+            --color-hover: darkred;
+            --color-border-hover: darkred;
+
+            @include simpleLink();
+
+            min-height: 32px;
+            display: inline-flex;
+            align-items: center;
+            padding: var(--space-2xs) var(--space-xs);
+            cursor: pointer;
+            border-radius: 8px;
+            background-color: transparent;
+            border: 1px solid darkred;
+        }
+    }
 }

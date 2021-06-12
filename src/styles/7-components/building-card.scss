@@ -6,6 +6,9 @@
     margin-bottom: var(--space-m);
     width: 100%;
     height: auto;
+    aspect-ratio: 312 / 148;
+    background-color: aliceblue;
+    object-fit: contain;
 }
 
 .building-card__title {

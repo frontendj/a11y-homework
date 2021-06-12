@@ -5,6 +5,9 @@
 .event-card__image {
     width: 100%;
     margin-bottom: var(--space-m);
+    aspect-ratio: 312 / 148;
+    background-color: aliceblue;
+    object-fit: contain;
 }
 
 .event-card__title {

@@ -17,9 +17,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ generatedTitle }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
-        {% if not isdevelopment %}
-            <base href="https://frontendj.github.io/a11y-homework">
-        {% endif %}
 
         {% include 'favicon.njk' %}
 
@@ -55,7 +52,7 @@
                             <span aria-hidden="true">Рус</span>
                             <span class="visually-hidden">Русский</span>
                         </div>
-                        <a class="language-switcher__item" href="/en" hreflang="/en">
+                        <a class="language-switcher__item" href="/en" hreflang="en">
                             <span aria-hidden="true">Eng</span>
                             <span class="visually-hidden" lang="en">English</span>
                         </a>

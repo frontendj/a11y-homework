@@ -5,12 +5,12 @@
 .events__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
+    width: calc(100% + var(--space-l));
 }
 
 .events__item {
-    width: calc((100% - 2 * var(--space-l)) / 3)
+    width: calc((100% - 2 * var(--space-l)) / 3);
+    margin-right: var(--space-l);
 }
 
 .events__filter {

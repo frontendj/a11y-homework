@@ -304,8 +304,93 @@ function setPromoRoverFocus() {
     var group2 = new TabGroup('#promo');
 }
 
+function setEventsRoverFocus() {
+    // Define values for keycodes
+    var LEFT = 37;
+    var RIGHT = 39;
+
+    // Helper function to convert NodeLists to Arrays
+    function slice(nodes) {
+        return Array.prototype.slice.call(nodes);
+    }
+
+    function TabGroup(id) {
+        this.el = document.querySelector(id);
+        this.buttons = slice(this.el.querySelectorAll('button'));
+        this.selected = 0;
+        this.focusedButton = this.buttons[this.selected];
+
+        this.el.addEventListener('keyup', this.handleKeyUp.bind(this));
+        this.el.addEventListener('click', this.handleClick.bind(this));
+    }
+
+    TabGroup.prototype.handleKeyUp = function(e) {
+        switch(e.keyCode) {
+            case LEFT: {
+                e.preventDefault();
+
+                if (this.selected === 0) {
+                    this.selected = this.buttons.length - 1;
+                } else {
+                    this.selected--;
+                }
+                break;
+            }
+
+            case RIGHT: {
+                e.preventDefault();
+
+                if (this.selected === this.buttons.length - 1) {
+                    this.selected = 0;
+                } else {
+                    this.selected++;
+                }
+                break;
+            }
+        }
+        this.changeFocus(this.selected);
+    };
+
+    TabGroup.prototype.handleClick = function(e) {
+        var children = e.target.parentNode.children
+        for (var i = 0; i < children.length; i++) {
+            if (e.target == children[i]) break;
+        }
+        this.selected = i;
+        this.changeFocus(this.selected);
+    }
+
+    TabGroup.prototype.changeFocus = function(idx) {
+        // Set the old button to tabindex -1
+        this.focusedButton.tabIndex = -1;
+        this.focusedButton.classList.remove('is-active');
+        const allItems = document.getElementById('events-list').querySelectorAll(`[data-filter]`);
+
+        this.focusedButton = this.buttons[idx];
+        this.focusedButton.tabIndex = 0;
+        this.focusedButton.focus();
+        this.focusedButton.classList.add('is-active');
+        const filter = this.focusedButton.getAttribute('data-filter');
+        console.log('filter', filter);
+
+        allItems.forEach((item) => {
+            const itemFilter = item.getAttribute('data-filter');
+            console.log('itemFilter', itemFilter);
+
+            if (filter === 'all' || itemFilter === filter) {
+                item.removeAttribute('hidden');
+            } else {
+                item.setAttribute('hidden', true);
+            }
+        })
+    };
+
+    var group3 = new TabGroup('#events-filter');
+}
+
 (function() {
     setPixelsPerRem();
     setMuseumInfoRoverFocus();
     setPromoRoverFocus();
+    setEventsRoverFocus();
 }());

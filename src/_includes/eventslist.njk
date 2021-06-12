@@ -1,17 +1,17 @@
 <div class="events" role="tablist">
     <div class="events__filter" id="events-filter">
-        <button class="events__button header-4 is-active" id="events-heading1" role="tab" tabindex="0">
+        <button class="events__button header-4 is-active" id="events-heading1" role="tab" tabindex="0" data-filter="all">
             Все
         </button>
-        <button class="events__button header-4" id="events-heading2" role="tab" tabindex="-1">
+        <button class="events__button header-4" id="events-heading2" role="tab" tabindex="-1" data-filter="today">
             Сегодня
         </button>
-        <button class="events__button header-4" id="events-heading3" role="tab" tabindex="-1">
+        <button class="events__button header-4" id="events-heading3" role="tab" tabindex="-1" data-filter="tomorrow">
             Завтра
         </button>
     </div>
 
-    <ul class="events__list">
+    <ul class="events__list" id="events-list">
         {% for event in eventslist | reverse %}
             <li class="events__item" data-filter="{{ event.data.filter }}">
                 <div class="event-card">

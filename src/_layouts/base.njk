@@ -154,17 +154,17 @@
                         <div class="subscribe-form__title header-3" id="subscribe-title">Подписка на новости</div>
                         <div class="subscribe-form__control subscribe-form__control--email">
                             <label class="subscribe-form__email-label p-3" for="subscribe-email">E-mail</label>
-                            <input class="subscribe-form__email-field p-2" type="email" id="subscribe-email" required autocomplete="email" />
+                            <input class="subscribe-form__email-field p-2" type="email" id="subscribe-email" required autocomplete="email" placeholder=" " />
                         </div>
                         <label class="subscribe-form__control subscribe-form__control--agreement p-2">
                             <span class="subscribe-form__checkbox">
-                                <input type="checkbox" required />
+                                <input type="checkbox" required id="subscribe-checkbox" />
                             </span>
                             <span class="subscribe-form__agreement">
                                 Согласие на обработку персональных данных
                             </span>
                         </label>
-                        <button class="subscribe-form__action" id="subscribe-button" type="submit">Подписаться</button>
+                        <button class="subscribe-form__action" id="subscribe-button" type="submit" onClick="markSubscribeBlurred()">Подписаться</button>
                     </form>
                 </div>
             </div>
@@ -179,21 +179,21 @@
                     </button>
                     <div class="dialog__content">
                         <h2 class="dialog__title header-1" id="modal-login-title">Вход</h2>
-                        <form class="dialog__form" id="auth-form" action="{{ '/profile/' | url }}">
+                        <form class="dialog__form" id="auth-form" action="{{ '/profile/' | url }}" aria-label="Форма авторизации">
                             <div class="dialog__control">
                                 <div class="dialog__label p-2">
                                     <label for="login">Логин</label>
                                 </div>
-                                <input class="dialog__input" type="text" id="login" required />
+                                <input class="dialog__input" type="text" id="login" required placeholder=" "/>
                             </div>
                             <div class="dialog__control">
                                 <div class="dialog__label p-2">
                                     <label for="password">Пароль</label>
                                 </div>
-                                <input class="dialog__input" type="password" id="password" required />
+                                <input class="dialog__input" type="password" id="password" required placeholder=" "/>
                             </div>
                             <div class="dialog__actions">
-                                <button class="dialog__action dialog__action--primary" type="submit">Вход</button>
+                                <button class="dialog__action dialog__action--primary" type="submit" onClick="markAuthBlurred()">Вход</button>
                             </div>
                         </form>
                     </div>

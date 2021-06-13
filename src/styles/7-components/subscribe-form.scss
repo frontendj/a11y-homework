@@ -22,6 +22,11 @@
     border: 0;
     border-bottom: 1px solid black;
     width: 100%;
+
+    .has-submit &:invalid {
+        border-color: red;
+        outline-color: red;
+    }
 }
 
 .subscribe-form__email-label {
@@ -70,6 +75,11 @@
         left: 0;
         top: 0;
         margin: 0;
+
+        .has-submit &:invalid {
+            box-shadow: 0 0 0 1px red;
+            outline-color: red;
+        }
     }
 }
 

@@ -38,6 +38,11 @@
     appearance: none;
     padding: 0 16px;
     font-size: var(--step-5);
+
+    .has-submit &:invalid {
+        border-color: red;
+        outline-color: red;
+    }
 }
 
 .dialog__label {

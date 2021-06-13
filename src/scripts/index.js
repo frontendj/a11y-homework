@@ -8,6 +8,14 @@ function setPixelsPerRem() {
     document.documentElement.style.setProperty('--ppr', getPixelsPerRem());
 }
 
+function markAuthBlurred() {
+    document.getElementById('auth-form').classList.add('has-submit');
+}
+
+function markSubscribeBlurred() {
+    document.getElementById('subscribe-form').classList.add('has-submit');
+}
+
 function openLoginDialog(){
     document.body.classList.add('has-modal');
 
@@ -23,9 +31,19 @@ function openLoginDialog(){
     document.getElementById('login-button').setAttribute('tabindex', '-1');
     document.getElementById('logout-button').setAttribute('tabindex', '-1');
 
+    document.getElementById('auth-form').classList.remove('has-submit');
+
     // TODO: fix with keyup
     document.addEventListener('keydown', function(e) {
         let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            if(document.getElementById('login') === document.activeElement || document.getElementById('password') === document.activeElement){
+                markAuthBlurred();
+            }
+
+            return;
+        }
 
         if (e.key === 'Escape' || e.keyCode === 27) {
             closeLoginDialog(true);
@@ -52,7 +70,6 @@ function openLoginDialog(){
 
     document.getElementById('auth-form').addEventListener('submit', function(e) {
         e.preventDefault();
-
         const login = document.getElementById('login').value;
         window.localStorage.setItem('login', login);
 
@@ -491,6 +508,15 @@ function num_word(value, words){
 }
 
 function onSubsribeSubmit(){
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            if(document.getElementById('subscribe-email') === document.activeElement || document.getElementById('subscribe-checkbox') === document.activeElement){
+                markSubscribeBlurred();
+            }
+
+            return true;
+        }
+    });
 
     document.getElementById('subscribe-form').addEventListener('submit', function(e) {
         e.preventDefault();

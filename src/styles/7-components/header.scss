@@ -59,6 +59,8 @@
     cursor: pointer;
     padding: 0;
     color: var(--color-text);
+    height: 44px;
+    width: 44px;
 
     &:hover {
         color: var(--color-primary);
@@ -66,14 +68,32 @@
 
     > svg {
         pointer-events: none;
+        width: 32px;
+        height: 32px;
     }
+
 }
+
+
 
 .header__auth-user {
     max-width: 100px;
-    display: block;
+    display: flex;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     min-width: 0;
+    align-items: center;
+}
+
+.header__auth-user-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
 }

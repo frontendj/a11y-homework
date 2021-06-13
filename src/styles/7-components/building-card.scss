@@ -22,7 +22,8 @@
 
         @include simpleLink();
 
-        &::before {
+        &::before,
+        &::after {
             content: '';
             position: absolute;
             left: -10px;
@@ -30,11 +31,17 @@
             right: -10px;
             bottom: -10px;
             border-radius: 8px;
-            border: 2px solid transparent;
+            z-index: 1;
+            opacity: 0;
+        }
+
+        &::before {
+            z-index: -1;
+            background-color: #F9F9FB;
         }
 
         &:hover::before {
-            border-color: var(--color-primary);
+            opacity: 1;
         }
 
         &:focus {
@@ -44,12 +51,17 @@
             outline: none;
 
             &::before {
-                border-color: var(--color-primary);
+                outline: 2px solid var(--color-primary);
+                opacity: 1;
             }
         }
 
         &:focus:not(:focus-visible) {
             outline: 0;
+
+            &::before {
+                outline: 0;
+            }
         }
     }
 }

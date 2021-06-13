@@ -25,11 +25,7 @@ function openLoginDialog(){
         let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
         if (e.key === 'Escape' || e.keyCode === 27) {
-            closeLoginDialog();
-
-            setTimeout(function() {
-                document.getElementById('login-button').focus();
-            }, 50);
+            closeLoginDialog(true);
 
             return;
         }
@@ -59,19 +55,27 @@ function openLoginDialog(){
 
         renderAuthBlock();
         closeLoginDialog();
+    });
 
+    modal.focus();
+    // firstFocusableElement.focus();
+}
+
+function closeLoginDialog(noSubmit){
+    const modal = document.querySelector('#modal-login');
+    modal.setAttribute('tabindex', '-1');
+    document.body.classList.remove('has-modal');
+    modal.setAttribute('hidden', true);
+
+    if (noSubmit) {
+        setTimeout(function() {
+            document.getElementById('login-button').focus();
+        }, 50);
+    } else {
         setTimeout(function() {
             document.getElementById('auth-user').focus();
         }, 50);
-    });
-
-    firstFocusableElement.focus();
-}
-
-function closeLoginDialog(){
-    const modal = document.querySelector('#modal-login');
-    document.body.classList.remove('has-modal');
-    modal.setAttribute('hidden', true);
+    }
 }
 
 function openLogoutDialog(){
@@ -91,12 +95,7 @@ function openLogoutDialog(){
         let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
         if (e.key === 'Escape' || e.keyCode === 27) {
-            closeLogoutDialog();
-
-            setTimeout(function() {
-                document.getElementById('logout-button').focus();
-            }, 50);
-            return;
+            closeLogoutDialog(true);
         }
 
         if (!isTabPressed) {
@@ -123,20 +122,28 @@ function openLogoutDialog(){
 
         renderAuthBlock();
         closeLogoutDialog();
-
-        setTimeout(function() {
-            document.getElementById('login-button').focus();
-        }, 50);
     });
 
-    firstFocusableElement.focus();
+    modal.focus();
+    // firstFocusableElement.focus();
 }
 
 
-function closeLogoutDialog(){
+function closeLogoutDialog(noSubmit){
     const modal = document.querySelector('#modal-logout');
+    modal.setAttribute('tabindex', '-1');
     document.body.classList.remove('has-modal');
     modal.setAttribute('hidden', true);
+
+    if (noSubmit) {
+        setTimeout(function() {
+            document.getElementById('logout-button').focus();
+        }, 50);
+    } else {
+        setTimeout(function() {
+            document.getElementById('login-button').focus();
+        }, 50);
+    }
 }
 
 
@@ -159,10 +166,6 @@ function openSubscribeDialog(){
         if (e.key === 'Escape' || e.keyCode === 27) {
             closeSubscribeDialog();
 
-            setTimeout(function() {
-                document.getElementById('subscribe-button').focus();
-            }, 50);
-
             return;
         }
 
@@ -183,13 +186,22 @@ function openSubscribeDialog(){
         }
     });
 
-    firstFocusableElement.focus();
+    modal.setAttribute('tabindex', 0);
+    modal.focus();
+
+    // firstFocusableElement.focus();
 }
 
 function closeSubscribeDialog(){
     const modal = document.querySelector('#modal-subscribe');
+    modal.setAttribute('tabindex', '-1');
     document.body.classList.remove('has-modal');
     modal.setAttribute('hidden', true);
+
+    document.getElementById('subscribe-button').focus();
+    setTimeout(function() {
+        document.getElementById('subscribe-button').focus();
+    }, 50);
 }
 
 function setMuseumInfoRoverFocus() {

@@ -20,6 +20,9 @@ function openLoginDialog(){
     const focusableContent = modal.querySelectorAll(focusableElements);
     const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
 
+    document.getElementById('login-button').setAttribute('tabindex', '-1');
+    document.getElementById('logout-button').setAttribute('tabindex', '-1');
+
     // TODO: fix with keyup
     document.addEventListener('keydown', function(e) {
         let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
@@ -69,10 +72,13 @@ function closeLoginDialog(noSubmit){
 
     if (noSubmit) {
         setTimeout(function() {
+            document.getElementById('login-button').removeAttribute('tabindex');
             document.getElementById('login-button').focus();
         }, 50);
     } else {
         setTimeout(function() {
+            document.getElementById('auth-user').removeAttribute('tabindex');
+            document.getElementById('logout-button').removeAttribute('tabindex');
             document.getElementById('auth-user').focus();
         }, 50);
     }
@@ -89,6 +95,9 @@ function openLogoutDialog(){
     const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
     const focusableContent = modal.querySelectorAll(focusableElements);
     const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+    document.getElementById('login-button').setAttribute('tabindex', '-1');
+    document.getElementById('logout-button').setAttribute('tabindex', '-1');
 
     // TODO: fix with keyup
     document.addEventListener('keydown', function(e) {
@@ -137,10 +146,12 @@ function closeLogoutDialog(noSubmit){
 
     if (noSubmit) {
         setTimeout(function() {
+            document.getElementById('logout-button').removeAttribute('tabindex');
             document.getElementById('logout-button').focus();
         }, 50);
     } else {
         setTimeout(function() {
+            document.getElementById('login-button').removeAttribute('tabindex');
             document.getElementById('login-button').focus();
         }, 50);
     }
@@ -158,6 +169,8 @@ function openSubscribeDialog(){
     const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
     const focusableContent = modal.querySelectorAll(focusableElements);
     const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+
+    document.getElementById('subscribe-button').setAttribute('tabindex', '-1');
 
     // TODO: fix with keyup
     document.addEventListener('keydown', function(e) {
@@ -198,8 +211,8 @@ function closeSubscribeDialog(){
     document.body.classList.remove('has-modal');
     modal.setAttribute('hidden', true);
 
-    document.getElementById('subscribe-button').focus();
     setTimeout(function() {
+        document.getElementById('subscribe-button').removeAttribute('tabindex');
         document.getElementById('subscribe-button').focus();
     }, 50);
 }

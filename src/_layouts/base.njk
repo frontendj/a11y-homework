@@ -40,13 +40,11 @@
             </div>
         </noscript>
 
-        <nav aria-labelledby="skip-to-main">
+        <header class="header">
             <a class="skip-link" href="#main" id="skip-to-main">
                 {% if lang == 'ru' %} {{ 'К основному контенту' }} {% else %} {{ 'Skip to main content' }} {% endif %}
             </a>
-        </nav>
 
-        <header class="header">
             <div class="header__top">
                 <div class="header__home">
                     <a class="header__home-link" href="{% if lang == 'ru' %} {{ '/' | url }} {% else %} {{ '/en/' | url }} {% endif %}" >
@@ -126,11 +124,11 @@
         <footer class="footer" lang="ru" {% if lang == 'en' %} hidden {% endif %}>
             <div class="footer__inner">
                 <div class="footer__left">
-                    <div class="footer__menu">
+                    <nav class="footer__menu" aria-label="Футер">
                         <div class="footer__menu-item p-1"><a href="{{ '/accessible/' | url }}">Посетителям с инвалидностью</a></div>
                         <div class="footer__menu-item p-1"><a href="{{ '/privileges/' | url }}">Билеты и льготы</a></div>
                         <div class="footer__menu-item p-1"><a href="{{ '/corruption/' | url }}">Противодействие коррупции</a></div>
-                    </div>
+                    </nav>
 
                     <div class="footer__networks">
                         <div class="footer__networks-title header-3">Социальные сети</div>

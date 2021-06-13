@@ -1,13 +1,16 @@
-<div class="events" role="tablist">
+
+<div class="events" role="tablist" aria-label="Фильтр по датам">
+    <span aria-live="polite" class="visually-hidden" id="events-filter-results" tabindex="-1"></span>
+
     <div class="events__filter" id="events-filter">
-        <button class="events__button header-4 is-active" id="events-heading1" role="tab" tabindex="0" data-filter="all">
-            Все
+        <button class="events__button header-4 is-active" id="events-heading1" role="tab" tabindex="0" data-filter="all" aria-selected="true">
+            Все <span>(3<span class="visually-hidden"> события</span>)</span>
         </button>
         <button class="events__button header-4" id="events-heading2" role="tab" tabindex="-1" data-filter="today">
-            Сегодня
+            Сегодня <span>(1<span class="visually-hidden"> события</span>)</span>
         </button>
         <button class="events__button header-4" id="events-heading3" role="tab" tabindex="-1" data-filter="tomorrow">
-            Завтра
+            Завтра <span>(2<span class="visually-hidden"> события</span>)</span>
         </button>
     </div>
 

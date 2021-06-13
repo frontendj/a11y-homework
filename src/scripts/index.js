@@ -254,6 +254,7 @@ function setMuseumInfoRoverFocus() {
         // Set the old button to tabindex -1
         this.focusedButton.tabIndex = -1;
         this.focusedButton.classList.remove('is-active');
+        this.focusedButton.removeAttribute('aria-selected');
         const previousPanel = document.getElementById(this.focusedButton.getAttribute('aria-controls'));
         previousPanel.setAttribute('hidden', true);
 
@@ -262,6 +263,7 @@ function setMuseumInfoRoverFocus() {
         this.focusedButton.tabIndex = 0;
         this.focusedButton.focus();
         this.focusedButton.classList.add('is-active');
+        this.focusedButton.setAttribute('aria-selected', true);
         const newPanel = document.getElementById(this.focusedButton.getAttribute('aria-controls'));
         newPanel.removeAttribute('hidden');
     };
@@ -419,14 +421,25 @@ function setEventsRoverFocus() {
         // Set the old button to tabindex -1
         this.focusedButton.tabIndex = -1;
         this.focusedButton.classList.remove('is-active');
+        this.focusedButton.removeAttribute('aria-selected');
         const allItems = document.getElementById('events-list').querySelectorAll(`[data-filter]`);
 
         this.focusedButton = this.buttons[idx];
         this.focusedButton.tabIndex = 0;
         this.focusedButton.focus();
         this.focusedButton.classList.add('is-active');
+        this.focusedButton.setAttribute('aria-selected', true);
         const filter = this.focusedButton.getAttribute('data-filter');
-        console.log('filter', filter);
+
+        let eventsCount = allItems.length;
+        if (filter !== 'all') {
+            eventsCount = document.getElementById('events-list').querySelectorAll(`[data-filter='${filter}']`).length;
+        }
+
+        const prefix = ['Отобрано', 'Отобрано', 'Отобраны']
+        const postfix = ['событие', 'события', 'событый']
+        const filterAnnounce = `${num_word(eventsCount, prefix)} ${eventsCount} ${num_word(eventsCount, postfix)}`;
+        document.getElementById('events-filter-results').innerText = filterAnnounce;
 
         allItems.forEach((item) => {
             const itemFilter = item.getAttribute('data-filter');
@@ -441,6 +454,15 @@ function setEventsRoverFocus() {
     };
 
     var group3 = new TabGroup('#events-filter');
+}
+
+function num_word(value, words){
+    value = Math.abs(value) % 100;
+    var num = value % 10;
+    if(value > 10 && value < 20) return words[2];
+    if(num > 1 && num < 5) return words[1];
+    if(num == 1) return words[0];
+    return words[2];
 }
 
 function onSubsribeSubmit(){

@@ -12,13 +12,13 @@ title: Пушкинский музей
 
 <h1 class="visually-hidden">{{ metadata.title }}</h1>
 
-<div class="page__section">
+<section class="page__section" aria-labelledby="title-promo">
     <h2 class="page__section-title visually-hidden" id="title-promo">Анонсы</h2>
     {% include "promo.njk" %}
-</div>
+</section>
 
-<div class="page__section" hidden>
-    <h2 class="page__section-title header-1">
+<section class="page__section" hidden aria-labelledby="title-buy">
+    <h2 class="page__section-title header-1" id="title-buy">
         Магазин
     </h2>
 
@@ -27,20 +27,20 @@ title: Пушкинский музей
         <a href="{{ '/shop/' | url }}" class="buy__action">Товары</a>
         <a href="{{ '/membership/' | url }}" class="buy__action buy__action--secondary">Стать другом</a>
     </div>
-</div>
+</section>
 
-<div class="page__section">
+<section class="page__section" aria-labelledby="title-events">
     <h2 class="page__section-title header-1">
-        <a href="{{ '/events/' | url }}">Выставки и события</a>
+        <a href="{{ '/events/' | url }}" id="title-events">Выставки и события</a>
     </h2>
     {% include "eventslist.njk" %}
-</div>
+</section>
 
-<div class="page__section">
-    <h2 class="page__section-title header-1">Музей</h2>
-    <div class="museum-info" role="tablist">
+<section class="page__section" aria-labelledby="title-museum">
+    <h2 class="page__section-title header-1" id="title-museum">Музей</h2>
+    <div class="museum-info" role="tablist" aria-label="Информация">
         <div class="museum-info__tabs" id="museum-info-tabs">
-            <button class="museum-info__tab header-4 is-active" id="heading1" role="tab" aria-controls="panel1" tabindex="0">
+            <button class="museum-info__tab header-4 is-active" id="heading1" role="tab" aria-controls="panel1" tabindex="0" aria-selected="true">
                 Здания
             </button>
             <button class="museum-info__tab header-4" id="heading2" role="tab" aria-controls="panel2" tabindex="-1">
@@ -119,11 +119,11 @@ title: Пушкинский музей
             </p>
         </section>
     </div>
-</div>
+</section>
 
 
-<div class="page__section">
-    <h2 class="page__section-title header-1">
+<section class="page__section" aria-labelledby="title-virtual-tours">
+    <h2 class="page__section-title header-1" id="title-virtual-tours">
         Экскурсии и лекции в прямом эфире
     </h2>
     <div class="formatted-text">
@@ -134,5 +134,5 @@ title: Пушкинский музей
 
         <p>Мы будем благодарны за любое <a href="{{ '/donate/' | url }}">пожертвование</a>. Все поступившие средства будут направлены на организацию онлайн-проектов для наших посетителей.</p>
     </div>
-</div>
+</section>
 

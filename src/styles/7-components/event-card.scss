@@ -120,18 +120,28 @@
     }
 
     .event-card__link {
-        display: inline;
+        display: block;
+
 
         &:focus {
-            outline: initial;
+            outline: none;
         }
 
         &:focus-visible {
-            outline: initial;
+            outline: none;
+
+            .event-card__title {
+                outline: 2px solid var(--color-primary);
+            }
         }
 
-        &::before {
+        &::before,
+        &::after {
             content: none;
+        }
+
+        .event-card__title {
+            margin-left: calc(26 * var(--space-xs) + var(--space-m));
         }
     }
 

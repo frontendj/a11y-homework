@@ -71,7 +71,8 @@
 }
 
 .dialog__action--primary {
-    background: var(--color-secondary);
+    background: var(--color-primary);
+    color: var(--color-primary-contrast);
 }
 
 .dialog__close {

@@ -326,7 +326,7 @@ function setPromoRoverFocus() {
 
     function TabGroup(id) {
         this.el = document.querySelector(id);
-        this.slides = slice(this.el.querySelectorAll('li'));
+        this.slides = slice(this.el.querySelectorAll('.js-slide'));
         this.selected = 0;
         this.focusedSlide = this.slides[this.selected];
 

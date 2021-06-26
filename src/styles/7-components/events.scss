@@ -40,6 +40,10 @@
         background-color: var(--color-secondary);
         border-color: transparent;
         pointer-events: none;
+
+        > span {
+            color: #595959;
+        }
     }
 
     & + & {

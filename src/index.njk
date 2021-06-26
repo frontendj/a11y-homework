@@ -13,7 +13,7 @@ title: Пушкинский музей
 <h1 class="visually-hidden">{{ metadata.title }}</h1>
 
 <section class="page__section">
-    <h2 class="page__section-title visually-hidden">Анонсы</h2>
+    <h2 class="page__section-title visually-hidden" id="title-promo">Анонсы</h2>
     {% include "promo.njk" %}
 </section>
 
@@ -38,7 +38,7 @@ title: Пушкинский музей
 
 <section class="page__section">
     <h2 class="page__section-title header-1">Музей</h2>
-    <div class="museum-info" role="tablist" aria-label="Информация">
+    <div class="museum-info" role="tablist">
         <div class="museum-info__tabs" id="museum-info-tabs">
             <button class="museum-info__tab header-4 is-active" id="heading1" role="tab" aria-controls="panel1" tabindex="0" aria-selected="true">
                 Здания

@@ -1,19 +1,21 @@
-<div class="promo" role="group" aria-labelledby="title-promo" aria-roledescription="carousel" id="promo">
+<div class="promo" role="group" aria-labelledby="title-promo" aria-roledescription="Карусель" id="promo">
     <span aria-live="polite" class="visually-hidden" id="current-slide-title"></span>
+
     <div class="promo__navigation" id="promo-buttons">
-        <button id="promo-prev" class="promo__arrow promo__arrow--prev" title="Предыдущий слайд">
+        <button id="promo-prev" class="promo__arrow promo__arrow--prev" title="Предыдущий слайд" aria-controls="promo-slides">
             <span class="visually-hidden">Предыдущий слайд</span>
-            <svg width="76" height="76" viewBox="0 0 76 76" focusable="false"><path d="M18.4 36L53.4.7A3 3 0 0157.7 5l-33 33 33 33a3 3 0 01-4.1 4.1l-35.1-35a3 3 0 010-4.2z" fill="currentColor" /></svg>
+            <svg width="76" height="76" viewBox="0 0 76 76" focusable="false" aria-hidden="true"><path d="M18.4 36L53.4.7A3 3 0 0157.7 5l-33 33 33 33a3 3 0 01-4.1 4.1l-35.1-35a3 3 0 010-4.2z" fill="currentColor" /></svg>
         </button>
-        <button id="promo-next" class="promo__arrow promo__arrow--next" title="Следующий слайд">
+        <button id="promo-next" class="promo__arrow promo__arrow--next" title="Следующий слайд" aria-controls="promo-slides">
             <span class="visually-hidden">Следующий слайд</span>
-            <svg width="76" height="76" viewBox="0 0 76 76" focusable="false"><path d="M57.6 40l-35 35.2a3 3 0 01-4.2-4.2l33-33-33-33A3 3 0 0122.5.9l35.1 35a3 3 0 010 4.2z" fill="currentColor" /></svg>
+            <svg width="76" height="76" viewBox="0 0 76 76" focusable="false" aria-hidden="true"><path d="M57.6 40l-35 35.2a3 3 0 01-4.2-4.2l33-33-33-33A3 3 0 0122.5.9l35.1 35a3 3 0 010 4.2z" fill="currentColor" /></svg>
         </button>
     </div>
+
     <div class="promo__list" id="promo-slides">
         {% for event in eventslist | reverse %}
             {% if event.data.inPromo %}
-                <div class="promo__item {% if loop.index === 1 %} is-active {% endif %}" data-title="{% if event.data.titleShort %}{{ event.data.titleShort }}{% else %} {{ event.data.title }}{% endif %}" {% if loop.index !== 1 %} hidden tabIndex="-1" {% endif %} style="{{ event.data.color }}">
+                <div class="promo__item {% if loop.index === 1 %} is-active {% endif %} js-slide" data-title="{% if event.data.titleShort %}{{ event.data.titleShort }}{% else %} {{ event.data.title }}{% endif %}" {% if loop.index !== 1 %} hidden tabIndex="-1" {% endif %} style="{{ event.data.color }}">
                     <img class="promo__image" src="{{ event.url | url }}cover-big.jpg" alt="" />
 
                     <div class="promo__content">

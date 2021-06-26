@@ -4,7 +4,7 @@ Accessibility course exercises
 permalink: /index.html
 ---
 
-Важные ошибки (частично исправлены в https://github.com/frontendj/a11y-homework/v2/)
+Важные ошибки (частично исправлены в https://frontendj.github.io/a11y-homework/v2/)
 
 * [x] Поиск не является областью (role="search" на FORM)
 * [x] aria-haspopup заставляет скринридер произнести "Кнопочное меню", что неверно

@@ -166,6 +166,6 @@ module.exports = function(eleventyConfig) {
         // You can also pass this in on the command line using `--pathprefix`
 
         // Optional (default is shown)
-        pathPrefix: '/a11y-homework/',
+        pathPrefix: '/a11y-homework/v2/',
     };
 };

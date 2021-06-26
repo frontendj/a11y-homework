@@ -12,13 +12,13 @@ title: Пушкинский музей
 
 <h1 class="visually-hidden">{{ metadata.title }}</h1>
 
-<section class="page__section" aria-labelledby="title-promo">
-    <h2 class="page__section-title visually-hidden" id="title-promo">Анонсы</h2>
+<section class="page__section">
+    <h2 class="page__section-title visually-hidden">Анонсы</h2>
     {% include "promo.njk" %}
 </section>
 
-<section class="page__section" hidden aria-labelledby="title-buy">
-    <h2 class="page__section-title header-1" id="title-buy">
+<section class="page__section" hidden>
+    <h2 class="page__section-title header-1">
         Магазин
     </h2>
 
@@ -29,15 +29,15 @@ title: Пушкинский музей
     </div>
 </section>
 
-<section class="page__section" aria-labelledby="title-events">
+<section class="page__section">
     <h2 class="page__section-title header-1">
-        <a href="{{ '/events/' | url }}" id="title-events">Выставки и события</a>
+        <a href="{{ '/events/' | url }}">Выставки и события</a>
     </h2>
     {% include "eventslist.njk" %}
 </section>
 
-<section class="page__section" aria-labelledby="title-museum">
-    <h2 class="page__section-title header-1" id="title-museum">Музей</h2>
+<section class="page__section">
+    <h2 class="page__section-title header-1">Музей</h2>
     <div class="museum-info" role="tablist" aria-label="Информация">
         <div class="museum-info__tabs" id="museum-info-tabs">
             <button class="museum-info__tab header-4 is-active" id="heading1" role="tab" aria-controls="panel1" tabindex="0" aria-selected="true">
@@ -52,54 +52,54 @@ title: Пушкинский музей
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
                         <img class="building-card__image" src="{{ '/images/building-1.png' | url }}" alt=""/>
-                        <div class="building-card__title header-2">
-                            <a href="{{ '/buildings/#3' | url }}">Мемориальная квартира С.Т. Рихтера</a>
-                        </div>
+                        <h3 class="building-card__title header-2">
+                            <a href="{{ '/buildings/#1' | url }}">Мемориальная квартира С.Т. Рихтера</a>
+                        </h3>
                         <p class="building-card__address street-address p-1">ул. Большая Бронная, 2/6, 16 этаж, кв. 58</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
                         <img class="building-card__image" src="{{ '/images/building-2.png' | url }}" alt=""/>
-                        <div class="building-card__title header-2">
-                            <a href="{{ '/buildings/#3' | url }}">Центр эстетического воспитания «Мусейон»</a>
-                        </div>
+                        <h3 class="building-card__title header-2">
+                            <a href="{{ '/buildings/#2' | url }}">Центр эстетического воспитания «Мусейон»</a>
+                        </h3>
                         <p class="building-card__address p-1"><span class="street-address">Колымажный пер., 6/2, 3</span> (вход с Малого Знаменского переулка)</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
                         <img class="building-card__image" src="{{ '/images/building-3.png' | url }}" alt=""/>
-                        <div class="building-card__title header-2">
+                        <h3 class="building-card__title header-2">
                             <a href="{{ '/buildings/#3' | url }}">Усадьба Лопухиных</a>
-                        </div>
+                        </h3>
                         <p class="building-card__address street-address p-1">Малый Знаменский пер., 3/5с4</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
                         <img class="building-card__image" src="{{ '/images/building-4.png' | url }}" alt=""/>
-                        <div class="building-card__title header-2">
+                        <h3 class="building-card__title header-2">
                             <a href="{{ '/buildings/#4' | url }}">Учебный музей</a>
-                        </div>
+                        </h3>
                         <p class="building-card__address street-address p-1">ул. Чаянова, 15</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
                         <img class="building-card__image" src="{{ '/images/building-5.png' | url }}" alt=""/>
-                        <div class="building-card__title header-2">
+                        <h3 class="building-card__title header-2">
                             <a href="{{ '/buildings/#5' | url }}">Отдел личных коллекций</a>
-                        </div>
+                        </h3>
                         <p class="building-card__address street-address p-1">ул. Волхонка, 10</p>
                     </div>
                 </li>
                 <li class="buildings-list__item">
                     <div class="building-card vcard">
                         <img class="building-card__image" src="{{ '/images/building-6.png' | url }}" alt=""/>
-                        <div class="building-card__title header-2">
+                        <h3 class="building-card__title header-2">
                             <a href="{{ '/buildings/#6' | url }}">Галерея</a>
-                        </div>
+                        </h3>
                         <p class="building-card__address street-address p-1">ул. Волхонка, 14</p>
                     </div>
                 </li>
@@ -122,8 +122,8 @@ title: Пушкинский музей
 </section>
 
 
-<section class="page__section" aria-labelledby="title-virtual-tours">
-    <h2 class="page__section-title header-1" id="title-virtual-tours">
+<section class="page__section">
+    <h2 class="page__section-title header-1">
         Экскурсии и лекции в прямом эфире
     </h2>
     <div class="formatted-text">

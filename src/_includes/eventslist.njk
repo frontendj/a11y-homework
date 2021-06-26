@@ -1,7 +1,5 @@
 
 <div class="events" role="tablist" aria-label="Фильтр по датам">
-    <span aria-live="polite" class="visually-hidden" id="events-filter-results" tabindex="-1"></span>
-
     <div class="events__filter" id="events-filter">
         <button class="events__button header-4 is-active" id="events-heading1" role="tab" tabindex="0" data-filter="all" aria-selected="true">
             Все <span>(3<span class="visually-hidden"> события</span>)</span>
@@ -20,13 +18,15 @@
                 <li class="events__item" data-filter="{{ event.data.filter }}">
                     <div class="event-card">
                         <div class="event-card__content">
-                            <a class="event-card__link header-2" href="{{ event.url | url }}">
-                                <img class="event-card__image" src="{{ event.url | url }}cover-small.jpg" alt=""/>
+                            <h3>
+                                <a class="event-card__link header-2" href="{{ event.url | url }}">
+                                    <img class="event-card__image" src="{{ event.url | url }}cover-small.jpg" alt=""/>
 
-                                <span class="event-card__title">
-                                    {{ event.data.title }}
-                                </span>
-                            </a>
+                                    <span class="event-card__title">
+                                        {{ event.data.title }}
+                                    </span>
+                                </a>
+                            </h3>
                             <div class="event-card__dates p-1">{{ event.data.dates }}</div>
                         </div>
 

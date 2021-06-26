@@ -38,15 +38,12 @@
     appearance: none;
     padding: 0 16px;
     font-size: var(--step-5);
+    margin-top: var(--space-2xs);
 
     .has-submit &:invalid {
         border-color: red;
         outline-color: red;
     }
-}
-
-.dialog__label {
-    margin-bottom: var(--space-2xs);
 }
 
 .dialog__actions {

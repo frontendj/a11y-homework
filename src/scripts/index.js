@@ -473,16 +473,6 @@ function setEventsRoverFocus() {
         this.focusedButton.setAttribute('aria-selected', true);
         const filter = this.focusedButton.getAttribute('data-filter');
 
-        let eventsCount = allItems.length;
-        if (filter !== 'all') {
-            eventsCount = document.getElementById('events-list').querySelectorAll(`[data-filter='${filter}']`).length;
-        }
-
-        const prefix = ['Отобрано', 'Отобрано', 'Отобраны']
-        const postfix = ['событие', 'события', 'событый']
-        const filterAnnounce = `${num_word(eventsCount, prefix)} ${eventsCount} ${num_word(eventsCount, postfix)}`;
-        document.getElementById('events-filter-results').innerText = filterAnnounce;
-
         allItems.forEach((item) => {
             const itemFilter = item.getAttribute('data-filter');
             console.log('itemFilter', itemFilter);
@@ -496,15 +486,6 @@ function setEventsRoverFocus() {
     };
 
     var group3 = new TabGroup('#events-filter');
-}
-
-function num_word(value, words){
-    value = Math.abs(value) % 100;
-    var num = value % 10;
-    if(value > 10 && value < 20) return words[2];
-    if(num > 1 && num < 5) return words[1];
-    if(num == 1) return words[0];
-    return words[2];
 }
 
 function onSubsribeSubmit(){
